@@ -5,6 +5,8 @@ sermon « Tenir des conférences » (Chautauqua, 8 juin 1960, § 44).
 
 - Page : https://bileyiyabana.netlify.app (Netlify, compte bat.fabonk@gmail.com, projet `bileyiyabana`)
 - Fichiers : https://github.com/Fabonk/bileyi-ya-bana/releases (GitHub, compte Fabonk)
+- La bibliothèque en ligne (lien « Lire en ligne ») : https://fabonk.github.io/bileyi-ya-bana/ — la branche `gh-pages` du
+  même dépôt, publiée par `../pipeline/publish_site.py` ; les applications s'y mettent à jour toutes seules.
 
 Les installateurs ne sont pas sur Netlify : l'offre gratuite de Netlify ne permet qu'environ 15 Go de transfert par
 mois (à peu près 70 téléchargements de l'APK), alors que les « releases » GitHub n'ont pas de limite.
@@ -20,6 +22,10 @@ le bon fichier (sur iPhone, il ouvre les étapes d'installation, qui passent par
 QR code permet d'ouvrir la page sur le téléphone.
 
 ## Publier une nouvelle version
+
+Si seul le contenu de la bibliothèque change, il n'y a pas de nouvelle version à faire : refaire le site
+(`pipeline/build_site.py`) puis le publier (`pipeline/publish_site.py`) ; les applications installées le prennent
+toutes seules. Les étapes ci-dessous ne servent que pour une nouvelle version des applications elles-mêmes.
 
 1. Faire les trois fichiers (voir `../app-html/LISEZ-MOI.md` et `../app-windows/LISEZ-MOI.md`).
 2. Les copier sous ces noms (ici pour la version 1.2.0) : `BILEYI-YA-BANA-1.2.0-android.apk`,

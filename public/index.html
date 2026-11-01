@@ -107,6 +107,9 @@ a { color: var(--link); text-underline-offset: .18em; }
 .plateformes .ic { width: 1.15rem; height: 1.15rem; }
 .note-cta { margin: .9rem 0 0; font-size: .88rem; color: rgba(255, 255, 255, .72); }
 .note-cta:empty { display: none; }
+.en-ligne { margin: 1.1rem 0 0; font-size: .95rem; }
+.en-ligne a { color: #f6dc95; font-weight: 700; text-decoration-color: rgba(246, 220, 149, .45); }
+.en-ligne a:hover { text-decoration-color: currentColor; }
 
 /* the two phones */
 .phones { position: relative; height: 560px; }
@@ -295,6 +298,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
       <a class="brand" href="#"><img src="img/logo-96.png" width="44" height="44" alt=""><b>Bileyi ya Bana</b></a>
       <nav aria-label="Sur cette page">
         <a href="#citation">La citation</a>
+        <a href="https://fabonk.github.io/bileyi-ya-bana/">Lire en ligne</a>
         <a href="#installer">Installer</a>
         <a class="pill" href="#telecharger">Télécharger</a>
       </nav>
@@ -302,7 +306,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
 
     <div class="hero-grid">
       <div>
-        <p class="eyebrow">Gratuit · version 1.1.0</p>
+        <p class="eyebrow">Gratuit · version 1.2.0</p>
         <h1>Bileyi ya Bana</h1>
         <p class="lead">Les sermons de frère Branham en français, la Bible et les cantiques, réunis dans une application qui marche sans connexion.</p>
         <div class="actions">
@@ -318,6 +322,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
           <li><svg class="ic" aria-hidden="true" style="fill:currentColor;stroke:none"><use href="#i-apple"/></svg>iPhone et iPad</li>
           <li><svg class="ic" aria-hidden="true" style="fill:currentColor;stroke:none"><use href="#i-windows"/></svg>Windows</li>
         </ul>
+        <p class="en-ligne"><a href="https://fabonk.github.io/bileyi-ya-bana/">Ou lisez en ligne, sans rien installer <span aria-hidden="true">→</span></a></p>
       </div>
       <div class="phones" aria-hidden="true">
         <div class="halo"></div>
@@ -351,7 +356,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
   <section id="telecharger" aria-labelledby="t-telecharger">
     <div class="wrap">
       <div class="titre monte">
-        <span class="petit">Version 1.1.0</span>
+        <span class="petit">Version 1.2.0</span>
         <h2 id="t-telecharger">Télécharger</h2>
         <p>Choisissez votre appareil. Tout le contenu est dans l’application : une fois installée, elle n’a plus besoin d’internet, sauf pour les PDF et le Chat IA.</p>
       </div>
@@ -362,7 +367,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
           <div class="logo-os"><svg aria-hidden="true"><use href="#i-android"/></svg></div>
           <h3>Android</h3>
           <p class="req">Téléphones et tablettes<br>Android 7 ou plus récent</p>
-          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.1.0/BILEYI-YA-BANA-1.1.0-android.apk" download data-taille="222 Mo">
+          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.2.0/BILEYI-YA-BANA-1.2.0-android.apk" download data-taille="222 Mo">
             <svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Télécharger l’APK</a>
           <p class="fichier"><span>Fichier APK</span><span>222 Mo</span></p>
           <p class="astuce">S’installe par-dessus une ancienne version. <a href="#guide-android">Comment installer&#8239;?</a></p>
@@ -373,7 +378,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
           <div class="logo-os"><svg aria-hidden="true"><use href="#i-apple"/></svg></div>
           <h3>iPhone et iPad</h3>
           <p class="req">iOS 16.4 ou plus récent<br>Installation depuis un ordinateur</p>
-          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.1.0/BILEYI-YA-BANA-1.1.0-iphone.ipa" download data-taille="161 Mo">
+          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.2.0/BILEYI-YA-BANA-1.2.0-iphone.ipa" download data-taille="161 Mo">
             <svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Télécharger l’IPA</a>
           <p class="fichier"><span>Fichier IPA</span><span>161 Mo</span></p>
           <p class="astuce">Apple impose de passer par un ordinateur, avec Sideloadly. <a href="#guide-ios">Voir les étapes</a></p>
@@ -384,7 +389,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
           <div class="logo-os"><svg aria-hidden="true"><use href="#i-windows"/></svg></div>
           <h3>Windows</h3>
           <p class="req">Ordinateurs Windows 10 et 11<br>64 bits</p>
-          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.1.0/BILEYI-YA-BANA-1.1.0-windows-setup.exe" download data-taille="81 Mo">
+          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.2.0/BILEYI-YA-BANA-1.2.0-windows-setup.exe" download data-taille="81 Mo">
             <svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Télécharger l’installateur</a>
           <p class="fichier"><span>Installateur</span><span>81 Mo</span></p>
           <p class="astuce">S’installe sans mot de passe administrateur. <a href="#guide-windows">Comment installer&#8239;?</a></p>
@@ -396,6 +401,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
           <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.8a15.5 15.5 0 0 1 20 0M5.2 12.3a10.5 10.5 0 0 1 13.6 0M8.5 15.7a5.5 5.5 0 0 1 7 0"/><circle cx="12" cy="19.2" r="1.1" fill="currentColor"/></svg>
           <div>
             <p><b>Fichiers volumineux</b> : tous les sermons, livres et cantiques sont à l’intérieur. Téléchargez de préférence en Wi-Fi.</p>
+            <p><b>Une seule installation</b> : ensuite, l’application se met à jour toute seule par internet, en ne téléchargeant que ce qui a changé.</p>
             <p>Une question ou un problème&#8239;? Écrivez-nous sur <a href="https://wa.me/243820366841">WhatsApp</a>.</p>
           </div>
         </div>
@@ -479,7 +485,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
         <li class="monte"><span class="rond"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span>
           <b>Favoris</b><span>Gardez et surlignez en couleurs les passages qui vous parlent.</span></li>
       </ul>
-      <p class="nouveau monte"><b>Nouveau dans la version 1.1.0 :</b> la Bible Louis Segond, le surlignage en couleurs, le Chat IA renouvelé et le nouveau logo.</p>
+      <p class="nouveau monte"><b>Nouveau dans la version 1.2.0 :</b> l’application se met à jour toute seule, sans réinstaller, et toute la bibliothèque se lit aussi <a href="https://fabonk.github.io/bileyi-ya-bana/">en ligne</a>.</p>
     </div>
   </section>
 </main>
@@ -518,7 +524,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
       texte.textContent = os === 'android' ? 'Télécharger pour Android' : 'Télécharger pour Windows';
       cta.href = lien.getAttribute('href');
       cta.setAttribute('download', '');
-      note.textContent = 'Version 1.1.0 · ' + lien.getAttribute('data-taille') + (os === 'android' ? ' · de préférence en Wi-Fi' : '');
+      note.textContent = 'Version 1.2.0 · ' + lien.getAttribute('data-taille') + (os === 'android' ? ' · de préférence en Wi-Fi' : '');
     }
     var guide = document.getElementById('guide-' + os);
     if (guide) guide.open = true;
