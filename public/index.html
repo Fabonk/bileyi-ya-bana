@@ -231,6 +231,22 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
 .wa:hover { background: rgba(255, 255, 255, .18); }
 .wa svg { width: 1.25rem; height: 1.25rem; fill: #4ade80; }
 
+/* gifts: M-Pesa and Orange Money; the number is copied when touched */
+.dons { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .7rem; margin: 1.2rem 0 0; font-size: .92rem; color: rgba(255, 255, 255, .8); }
+.dons b { color: #fff; margin-right: .2rem; }
+.don { display: inline-flex; align-items: center; gap: .55rem; min-height: 2.5rem; padding: 0 1rem 0 .4rem; border: 0; border-radius: 999px; cursor: pointer;
+  font: 700 .95rem var(--ui); color: #fff; background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .3); }
+.don:hover { background: rgba(255, 255, 255, .18); }
+.pay { display: inline-flex; align-items: center; height: 1.75rem; padding: 0 .5rem; border-radius: 999px; font: 800 .8rem/1 var(--ui); white-space: nowrap; }
+.pay.mpesa { background: #fff; color: #1b9a3e; }
+.pay.mpesa i { color: #e60000; font-style: normal; }
+.pay.orange { gap: .35rem; padding: 0; color: #fff; font-weight: 800; }
+.pay .sq { display: inline-flex; align-items: flex-end; width: 1.75rem; height: 1.75rem; padding: 0 0 .15rem .15rem; border-radius: 4px;
+  background: #ff7900; color: #fff; font: 700 .45rem/1 var(--ui); }
+.pied .dons { flex-basis: 100%; justify-content: center; margin: 0; padding-top: 1.2rem; border-top: 1px solid rgba(255, 255, 255, .15); }
+.toast { position: fixed; left: 50%; bottom: 1.5rem; z-index: 9; transform: translateX(-50%); padding: .7rem 1.2rem; border-radius: 999px;
+  background: #1c1a2c; color: #fff; font-weight: 700; box-shadow: var(--shadow); }
+
 /* gentle reveal while scrolling (only with JS, and not when the visitor asks for less motion) */
 @media (prefers-reduced-motion: no-preference) {
   html.js .monte { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
@@ -244,7 +260,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
 @media (max-width: 960px) {
   .hero-grid { grid-template-columns: 1fr; text-align: center; padding: 1.5rem 0 3.5rem; gap: 1rem; }
   .lead { margin-inline: auto; }
-  .actions, .plateformes { justify-content: center; }
+  .actions, .plateformes, .dons { justify-content: center; }
   .phones { height: 470px; max-width: 420px; width: 100%; margin: 1rem auto 0; }
   .phone { width: 214px; padding: 8px; border-radius: 40px; }
   .phone .screen { border-radius: 32px; padding-top: 26px; }
@@ -306,7 +322,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
 
     <div class="hero-grid">
       <div>
-        <p class="eyebrow">Gratuit · version 1.2.0</p>
+        <p class="eyebrow">Gratuit · version 1.2.1</p>
         <h1>Bileyi ya Bana</h1>
         <p class="lead">Les sermons de frère Branham en français, la Bible et les cantiques, réunis dans une application qui marche sans connexion.</p>
         <div class="actions">
@@ -323,6 +339,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
           <li><svg class="ic" aria-hidden="true" style="fill:currentColor;stroke:none"><use href="#i-windows"/></svg>Windows</li>
         </ul>
         <p class="en-ligne"><a href="https://fabonk.github.io/bileyi-ya-bana/">Ou lisez en ligne, sans rien installer <span aria-hidden="true">→</span></a></p>
+        <p class="dons"><b>Faire un don</b><button type="button" class="don" data-copy="+243820366841" title="Copier le numéro"><span class="pay mpesa">M<i>-</i>PESA</span>+243 820 366 841</button><button type="button" class="don" data-copy="0840380701" title="Copier le numéro"><span class="pay orange"><span class="sq">orange</span>Money</span>0840380701</button></p>
       </div>
       <div class="phones" aria-hidden="true">
         <div class="halo"></div>
@@ -356,7 +373,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
   <section id="telecharger" aria-labelledby="t-telecharger">
     <div class="wrap">
       <div class="titre monte">
-        <span class="petit">Version 1.2.0</span>
+        <span class="petit">Version 1.2.1</span>
         <h2 id="t-telecharger">Télécharger</h2>
         <p>Choisissez votre appareil. Tout le contenu est dans l’application : une fois installée, elle n’a plus besoin d’internet, sauf pour les PDF et le Chat IA.</p>
       </div>
@@ -367,9 +384,9 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
           <div class="logo-os"><svg aria-hidden="true"><use href="#i-android"/></svg></div>
           <h3>Android</h3>
           <p class="req">Téléphones et tablettes<br>Android 7 ou plus récent</p>
-          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.2.0/BILEYI-YA-BANA-1.2.0-android.apk" download data-taille="222 Mo">
+          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.2.1/BILEYI-YA-BANA-1.2.1-android.apk" download data-taille="224 Mo">
             <svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Télécharger l’APK</a>
-          <p class="fichier"><span>Fichier APK</span><span>222 Mo</span></p>
+          <p class="fichier"><span>Fichier APK</span><span>224 Mo</span></p>
           <p class="astuce">S’installe par-dessus une ancienne version. <a href="#guide-android">Comment installer&#8239;?</a></p>
         </article>
 
@@ -378,9 +395,9 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
           <div class="logo-os"><svg aria-hidden="true"><use href="#i-apple"/></svg></div>
           <h3>iPhone et iPad</h3>
           <p class="req">iOS 16.4 ou plus récent<br>Installation depuis un ordinateur</p>
-          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.2.0/BILEYI-YA-BANA-1.2.0-iphone.ipa" download data-taille="161 Mo">
+          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.2.1/BILEYI-YA-BANA-1.2.1-iphone.ipa" download data-taille="163 Mo">
             <svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Télécharger l’IPA</a>
-          <p class="fichier"><span>Fichier IPA</span><span>161 Mo</span></p>
+          <p class="fichier"><span>Fichier IPA</span><span>163 Mo</span></p>
           <p class="astuce">Apple impose de passer par un ordinateur, avec Sideloadly. <a href="#guide-ios">Voir les étapes</a></p>
         </article>
 
@@ -389,7 +406,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
           <div class="logo-os"><svg aria-hidden="true"><use href="#i-windows"/></svg></div>
           <h3>Windows</h3>
           <p class="req">Ordinateurs Windows 10 et 11<br>64 bits</p>
-          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.2.0/BILEYI-YA-BANA-1.2.0-windows-setup.exe" download data-taille="81 Mo">
+          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.2.1/BILEYI-YA-BANA-1.2.1-windows-setup.exe" download data-taille="81 Mo">
             <svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Télécharger l’installateur</a>
           <p class="fichier"><span>Installateur</span><span>81 Mo</span></p>
           <p class="astuce">S’installe sans mot de passe administrateur. <a href="#guide-windows">Comment installer&#8239;?</a></p>
@@ -485,7 +502,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
         <li class="monte"><span class="rond"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span>
           <b>Favoris</b><span>Gardez et surlignez en couleurs les passages qui vous parlent.</span></li>
       </ul>
-      <p class="nouveau monte"><b>Nouveau dans la version 1.2.0 :</b> l’application se met à jour toute seule, sans réinstaller, et toute la bibliothèque se lit aussi <a href="https://fabonk.github.io/bileyi-ya-bana/">en ligne</a>.</p>
+      <p class="nouveau monte"><b>Nouveau dans la version 1.2.1 :</b> l’application se met à jour toute seule, sans réinstaller ; une citation copiée porte son titre, sa date et son auteur ; les favoris sont rangés par sections ; et toute la bibliothèque se lit aussi <a href="https://fabonk.github.io/bileyi-ya-bana/">en ligne</a>.</p>
     </div>
   </section>
 </main>
@@ -495,6 +512,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
     <a class="brand" href="#"><img src="img/logo-96.png" width="44" height="44" alt=""><b>Bileyi ya Bana</b></a>
     <p>© 2026 Bileyi ya Bana</p>
     <a class="wa" href="https://wa.me/243820366841"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>WhatsApp +243 820 366 841</a>
+    <p class="dons"><b>Faire un don</b><button type="button" class="don" data-copy="+243820366841" title="Copier le numéro"><span class="pay mpesa">M<i>-</i>PESA</span>+243 820 366 841</button><button type="button" class="don" data-copy="0840380701" title="Copier le numéro"><span class="pay orange"><span class="sq">orange</span>Money</span>0840380701</button></p>
   </div>
 </footer>
 
@@ -524,7 +542,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
       texte.textContent = os === 'android' ? 'Télécharger pour Android' : 'Télécharger pour Windows';
       cta.href = lien.getAttribute('href');
       cta.setAttribute('download', '');
-      note.textContent = 'Version 1.2.0 · ' + lien.getAttribute('data-taille') + (os === 'android' ? ' · de préférence en Wi-Fi' : '');
+      note.textContent = 'Version 1.2.1 · ' + lien.getAttribute('data-taille') + (os === 'android' ? ' · de préférence en Wi-Fi' : '');
     }
     var guide = document.getElementById('guide-' + os);
     if (guide) guide.open = true;
@@ -556,6 +574,18 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
     };
     document.head.appendChild(s);
   }
+
+  // a gift number is copied when touched, to paste it in M-Pesa or Orange Money
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-copy]');
+    if (!b) return;
+    var num = b.getAttribute('data-copy'), t = document.createElement('div');
+    if (navigator.clipboard) navigator.clipboard.writeText(num).catch(function () {});
+    t.className = 'toast';
+    t.textContent = 'Numéro copié : ' + num;
+    document.body.appendChild(t);
+    setTimeout(function () { t.remove(); }, 1800);
+  });
 
   // sections rise gently into view
   var blocs = document.querySelectorAll('.monte');
