@@ -36,6 +36,14 @@ a { color: var(--link); text-underline-offset: .18em; }
 :focus-visible { outline: 3px solid #e2b23f; outline-offset: 3px; border-radius: 6px; }
 .wrap { width: min(48rem, 100% - 2rem); margin-inline: auto; }
 
+/* the backdrop: the seven candles and brother Branham at the pulpit (../pipeline/make_fond.py), faint enough to read over */
+body::before, body::after { content: ""; position: fixed; z-index: -1; pointer-events: none; opacity: .07; background: center / contain no-repeat; }
+body::before { right: 0; bottom: 0; height: min(86vh, 50rem); aspect-ratio: 643 / 833; background-image: url(img/fond-branham.webp);
+  transform: translateX(13%); }
+body::after { left: -3vw; top: 24vh; width: min(50vw, 36rem); aspect-ratio: 909 / 581; background-image: url(img/fond-menorah.webp); }
+@media (max-width: 700px) { body::before { height: auto; width: 100vw; } body::after { left: -10vw; top: 15vh; width: 92vw; } }
+@media (prefers-color-scheme: dark) { body::before, body::after { opacity: .2; } }
+
 .tete { color: #fff; background: linear-gradient(165deg, #050e38, #1a1c86 70%, #3a1aa3); padding: 1.1rem 0 3.2rem; }
 .tete nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 2.2rem; }
 .brand { display: inline-flex; align-items: center; gap: .7rem; color: #fff; text-decoration: none; }
