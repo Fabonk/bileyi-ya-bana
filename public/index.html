@@ -344,7 +344,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
 
     <div class="hero-grid">
       <div>
-        <p class="eyebrow">Gratuit · version 1.2.1</p>
+        <p class="eyebrow">Gratuit · version 1.3.0</p>
         <h1>Bileyi ya Bana</h1>
         <p class="lead">Les sermons de frère Branham en français, la Bible et les cantiques, réunis dans une application qui marche sans connexion.</p>
         <div class="actions">
@@ -395,7 +395,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
   <section id="telecharger" aria-labelledby="t-telecharger">
     <div class="wrap">
       <div class="titre monte">
-        <span class="petit">Version 1.2.1</span>
+        <span class="petit">Version 1.3.0</span>
         <h2 id="t-telecharger">Télécharger</h2>
         <p>Choisissez votre appareil. Tout le contenu est dans l’application : une fois installée, elle n’a plus besoin d’internet, sauf pour les PDF et le Chat IA.</p>
       </div>
@@ -406,9 +406,9 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
           <div class="logo-os"><svg aria-hidden="true"><use href="#i-android"/></svg></div>
           <h3>Android</h3>
           <p class="req">Téléphones et tablettes<br>Android 7 ou plus récent</p>
-          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.2.1/BILEYI-YA-BANA-1.2.1-android.apk" download data-taille="224 Mo">
+          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.3.0/BILEYI-YA-BANA-1.3.0-android.apk" download data-taille="225 Mo" data-version="1.3.0">
             <svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Télécharger l’APK</a>
-          <p class="fichier"><span>Fichier APK</span><span>224 Mo</span></p>
+          <p class="fichier"><span>Fichier APK</span><span>225 Mo</span></p>
           <p class="astuce">S’installe par-dessus une ancienne version. <a href="#guide-android">Comment installer&#8239;?</a></p>
         </article>
 
@@ -428,7 +428,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
           <div class="logo-os"><svg aria-hidden="true"><use href="#i-windows"/></svg></div>
           <h3>Windows</h3>
           <p class="req">Ordinateurs Windows 10 et 11<br>64 bits</p>
-          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.2.1/BILEYI-YA-BANA-1.2.1-windows-setup.exe" download data-taille="81 Mo">
+          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.2.1/BILEYI-YA-BANA-1.2.1-windows-setup.exe" download data-taille="81 Mo" data-version="1.2.1">
             <svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Télécharger l’installateur</a>
           <p class="fichier"><span>Installateur</span><span>81 Mo</span></p>
           <p class="astuce">S’installe sans mot de passe administrateur. <a href="#guide-windows">Comment installer&#8239;?</a></p>
@@ -524,7 +524,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
         <li class="monte"><span class="rond"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span>
           <b>Favoris</b><span>Gardez et surlignez en couleurs les passages qui vous parlent.</span></li>
       </ul>
-      <p class="nouveau monte"><b>Nouveau :</b> sur iPhone et iPad, l’application s’installe sans ordinateur, depuis Safari. <b>Depuis la version 1.2.1 :</b> l’application se met à jour toute seule, sans réinstaller ; une citation copiée porte son titre, sa date et son auteur ; les favoris sont rangés par sections ; et toute la bibliothèque se lit aussi <a href="https://fabonk.github.io/bileyi-ya-bana/">en ligne</a>.</p>
+      <p class="nouveau monte"><b>Nouveau :</b> la lecture à voix haute, avec une voix d’homme, des sermons, des livres, des cantiques et des réponses du Chat IA (bouton « 🔊 Écouter » ; sur Android, installez la version 1.3.0) ; et sur iPhone et iPad, l’application s’installe sans ordinateur, depuis Safari. <b>Depuis la version 1.2.1 :</b> l’application se met à jour toute seule, sans réinstaller ; une citation copiée porte son titre, sa date et son auteur ; les favoris sont rangés par sections ; et toute la bibliothèque se lit aussi <a href="https://fabonk.github.io/bileyi-ya-bana/">en ligne</a>.</p>
     </div>
   </section>
   <section id="commentaire" aria-labelledby="t-commentaire">
@@ -583,7 +583,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
       texte.textContent = os === 'android' ? 'Télécharger pour Android' : 'Télécharger pour Windows';
       cta.href = lien.getAttribute('href');
       cta.setAttribute('download', '');
-      note.textContent = 'Version 1.2.1 · ' + lien.getAttribute('data-taille') + (os === 'android' ? ' · de préférence en Wi-Fi' : '');
+      note.textContent = 'Version ' + lien.getAttribute('data-version') + ' · ' + lien.getAttribute('data-taille') + (os === 'android' ? ' · de préférence en Wi-Fi' : '');
     }
     var guide = document.getElementById('guide-' + os);
     if (guide) guide.open = true;
