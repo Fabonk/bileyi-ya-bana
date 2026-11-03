@@ -207,6 +207,7 @@ details[open] summary .fleche { transform: rotate(180deg); }
 @media (prefers-color-scheme: dark) { .etapes > li::before { color: #c9bcff; } }
 .etapes > li + li::after { content: ""; position: absolute; left: 1rem; top: -.55rem; height: 1.05rem; border-left: 2px dotted var(--line); }
 .chapeau { margin: 0; padding: 0 1.4rem .6rem; color: var(--muted); }
+.btn-ios { margin-top: .6rem; min-height: 2.8rem; }
 .remarque { margin: 0 1.4rem 1.4rem; padding: .9rem 1.1rem; border-radius: 14px; background: var(--paper); font-size: .93rem; color: var(--muted); }
 kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; background: var(--soft); color: var(--ink); white-space: nowrap; }
 
@@ -231,21 +232,13 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
 .wa:hover { background: rgba(255, 255, 255, .18); }
 .wa svg { width: 1.25rem; height: 1.25rem; fill: #4ade80; }
 
-/* gifts: M-Pesa and Orange Money; the number is copied when touched */
-.dons { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .7rem; margin: 1.2rem 0 0; font-size: .92rem; color: rgba(255, 255, 255, .8); }
-.dons b { color: #fff; margin-right: .2rem; }
-.don { display: inline-flex; align-items: center; gap: .55rem; min-height: 2.5rem; padding: 0 1rem 0 .4rem; border: 0; border-radius: 999px; cursor: pointer;
-  font: 700 .95rem var(--ui); color: #fff; background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .3); }
+/* gifts: the button opens don.html (the M-Pesa and Orange Money numbers) */
+.dons { display: flex; margin: 1.2rem 0 0; }
+.don { display: inline-flex; align-items: center; gap: .5rem; min-height: 2.6rem; padding: 0 1.2rem 0 1rem; border-radius: 999px; text-decoration: none;
+  font: 800 .95rem var(--ui); color: #fff; background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .3); }
 .don:hover { background: rgba(255, 255, 255, .18); }
-.pay { display: inline-flex; align-items: center; height: 1.75rem; padding: 0 .5rem; border-radius: 999px; font: 800 .8rem/1 var(--ui); white-space: nowrap; }
-.pay.mpesa { background: #fff; color: #1b9a3e; }
-.pay.mpesa i { color: #e60000; font-style: normal; }
-.pay.orange { gap: .35rem; padding: 0; color: #fff; font-weight: 800; }
-.pay .sq { display: inline-flex; align-items: flex-end; width: 1.75rem; height: 1.75rem; padding: 0 0 .15rem .15rem; border-radius: 4px;
-  background: #ff7900; color: #fff; font: 700 .45rem/1 var(--ui); }
+.don .ic { width: 1.2rem; height: 1.2rem; fill: #ff5c8a; stroke: #ff5c8a; }
 .pied .dons { flex-basis: 100%; justify-content: center; margin: 0; padding-top: 1.2rem; border-top: 1px solid rgba(255, 255, 255, .15); }
-.toast { position: fixed; left: 50%; bottom: 1.5rem; z-index: 9; transform: translateX(-50%); padding: .7rem 1.2rem; border-radius: 999px;
-  background: #1c1a2c; color: #fff; font-weight: 700; box-shadow: var(--shadow); }
 
 /* gentle reveal while scrolling (only with JS, and not when the visitor asks for less motion) */
 @media (prefers-reduced-motion: no-preference) {
@@ -339,7 +332,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
           <li><svg class="ic" aria-hidden="true" style="fill:currentColor;stroke:none"><use href="#i-windows"/></svg>Windows</li>
         </ul>
         <p class="en-ligne"><a href="https://fabonk.github.io/bileyi-ya-bana/">Ou lisez en ligne, sans rien installer <span aria-hidden="true">→</span></a></p>
-        <p class="dons"><b>Faire un don</b><button type="button" class="don" data-copy="+243820366841" title="Copier le numéro"><span class="pay mpesa">M<i>-</i>PESA</span>+243 820 366 841</button><button type="button" class="don" data-copy="0840380701" title="Copier le numéro"><span class="pay orange"><span class="sq">orange</span>Money</span>0840380701</button></p>
+        <p class="dons"><a class="don" href="don.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.1A4.4 4.4 0 0 1 12 7.3a4.4 4.4 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg>Faites un don</a></p>
       </div>
       <div class="phones" aria-hidden="true">
         <div class="halo"></div>
@@ -394,11 +387,11 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
           <span class="badge">Pour votre appareil</span>
           <div class="logo-os"><svg aria-hidden="true"><use href="#i-apple"/></svg></div>
           <h3>iPhone et iPad</h3>
-          <p class="req">iOS 16.4 ou plus récent<br>Installation depuis un ordinateur</p>
-          <a class="btn btn-blue" href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.2.1/BILEYI-YA-BANA-1.2.1-iphone.ipa" download data-taille="163 Mo">
-            <svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Télécharger l’IPA</a>
-          <p class="fichier"><span>Fichier IPA</span><span>163 Mo</span></p>
-          <p class="astuce">Apple impose de passer par un ordinateur, avec Sideloadly. <a href="#guide-ios">Voir les étapes</a></p>
+          <p class="req">iOS 16.4 ou plus récent<br>Sans ordinateur, depuis Safari</p>
+          <a class="btn btn-blue" href="#guide-ios">
+            <svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>Installer sur l’iPhone</a>
+          <p class="fichier"><span>Application web</span><span>se met à jour seule</span></p>
+          <p class="astuce">Ajoutée à l’écran d’accueil avec Safari, en trois gestes. <a href="#guide-ios">Voir les étapes</a></p>
         </article>
 
         <article class="carte monte" id="carte-windows">
@@ -451,16 +444,16 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
 
         <details id="guide-ios" class="monte">
           <summary><span class="logo-os"><svg aria-hidden="true"><use href="#i-apple"/></svg></span>
-            <span>Sur iPhone ou iPad<small>Avec un ordinateur Windows ou Mac</small></span>
+            <span>Sur iPhone ou iPad<small>Sans ordinateur, avec Safari</small></span>
             <svg class="ic fleche" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bas"/></svg></summary>
-          <p class="chapeau">Il faut un ordinateur, le câble de l’iPhone et un identifiant Apple (le compte gratuit suffit).</p>
+          <p class="chapeau">L’application s’ajoute à l’écran d’accueil depuis Safari : ni ordinateur, ni compte Apple, ni fichier à installer.</p>
           <ol class="etapes">
-            <li>Sur l’ordinateur, téléchargez le fichier IPA et installez <a href="https://sideloadly.io/" rel="noopener">Sideloadly</a>. Sous Windows, installez aussi iTunes et iCloud depuis le site d’Apple (pas les versions du Microsoft Store).</li>
-            <li>Branchez l’iPhone, ouvrez Sideloadly, glissez le fichier IPA dans sa fenêtre, entrez votre identifiant Apple puis cliquez sur <kbd>Start</kbd>.</li>
-            <li>Sur l’iPhone, activez le mode développeur : <kbd>Réglages</kbd> › <kbd>Confidentialité et sécurité</kbd> › <kbd>Mode développeur</kbd>, puis redémarrez.</li>
-            <li>Autorisez l’application : <kbd>Réglages</kbd> › <kbd>Général</kbd> › <kbd>VPN et gestion de l’appareil</kbd>, touchez votre identifiant puis <kbd>Faire confiance</kbd>.</li>
+            <li>Sur l’iPhone, dans Safari, ouvrez la bibliothèque : <a class="btn btn-blue btn-ios" href="https://fabonk.github.io/bileyi-ya-bana/">Ouvrir la bibliothèque</a></li>
+            <li>Touchez <kbd>Partager</kbd> (le carré avec une flèche vers le haut), puis <kbd>Sur l’écran d’accueil</kbd>. S’il n’apparaît pas, faites défiler la liste vers le bas.</li>
+            <li>Touchez <kbd>Ajouter</kbd> : l’icône Bileyi ya Bana apparaît sur l’écran d’accueil. Ouvrez l’application depuis cette icône.</li>
+            <li>Pour tout lire sans internet, touchez <kbd>Tout télécharger</kbd> sur sa page d’accueil (de préférence en Wi-Fi). Sinon, les pages déjà ouvertes restent lisibles hors connexion.</li>
           </ol>
-          <p class="remarque">Avec un identifiant Apple gratuit, Apple n’autorise l’application que 7 jours : il faut ensuite la réinstaller avec Sideloadly, de la même façon.</p>
+          <p class="remarque">L’application se met à jour toute seule. Pour les habitués de Sideloadly, le fichier IPA reste disponible : <a href="https://github.com/Fabonk/bileyi-ya-bana/releases/download/v1.2.1/BILEYI-YA-BANA-1.2.1-iphone.ipa" download>BILEYI-YA-BANA-1.2.1-iphone.ipa</a> (163 Mo, à installer depuis un ordinateur).</p>
         </details>
 
         <details id="guide-windows" class="monte">
@@ -502,7 +495,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
         <li class="monte"><span class="rond"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span>
           <b>Favoris</b><span>Gardez et surlignez en couleurs les passages qui vous parlent.</span></li>
       </ul>
-      <p class="nouveau monte"><b>Nouveau dans la version 1.2.1 :</b> l’application se met à jour toute seule, sans réinstaller ; une citation copiée porte son titre, sa date et son auteur ; les favoris sont rangés par sections ; et toute la bibliothèque se lit aussi <a href="https://fabonk.github.io/bileyi-ya-bana/">en ligne</a>.</p>
+      <p class="nouveau monte"><b>Nouveau :</b> sur iPhone et iPad, l’application s’installe sans ordinateur, depuis Safari. <b>Depuis la version 1.2.1 :</b> l’application se met à jour toute seule, sans réinstaller ; une citation copiée porte son titre, sa date et son auteur ; les favoris sont rangés par sections ; et toute la bibliothèque se lit aussi <a href="https://fabonk.github.io/bileyi-ya-bana/">en ligne</a>.</p>
     </div>
   </section>
 </main>
@@ -512,7 +505,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
     <a class="brand" href="#"><img src="img/logo-96.png" width="44" height="44" alt=""><b>Bileyi ya Bana</b></a>
     <p>© 2026 Bileyi ya Bana</p>
     <a class="wa" href="https://wa.me/243820366841"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>WhatsApp +243 820 366 841</a>
-    <p class="dons"><b>Faire un don</b><button type="button" class="don" data-copy="+243820366841" title="Copier le numéro"><span class="pay mpesa">M<i>-</i>PESA</span>+243 820 366 841</button><button type="button" class="don" data-copy="0840380701" title="Copier le numéro"><span class="pay orange"><span class="sq">orange</span>Money</span>0840380701</button></p>
+    <p class="dons"><a class="don" href="don.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.1A4.4 4.4 0 0 1 12 7.3a4.4 4.4 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg>Faites un don</a></p>
   </div>
 </footer>
 
@@ -537,7 +530,7 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
     if (os === 'ios') {
       texte.textContent = 'Installer sur iPhone';
       cta.href = '#guide-ios';
-      note.textContent = 'Sur iPhone, l’installation passe par un ordinateur : voici comment faire.';
+      note.textContent = 'Sans ordinateur : l’application s’ajoute à l’écran d’accueil avec Safari.';
     } else {
       texte.textContent = os === 'android' ? 'Télécharger pour Android' : 'Télécharger pour Windows';
       cta.href = lien.getAttribute('href');
@@ -574,18 +567,6 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
     };
     document.head.appendChild(s);
   }
-
-  // a gift number is copied when touched, to paste it in M-Pesa or Orange Money
-  document.addEventListener('click', function (e) {
-    var b = e.target.closest && e.target.closest('[data-copy]');
-    if (!b) return;
-    var num = b.getAttribute('data-copy'), t = document.createElement('div');
-    if (navigator.clipboard) navigator.clipboard.writeText(num).catch(function () {});
-    t.className = 'toast';
-    t.textContent = 'Numéro copié : ' + num;
-    document.body.appendChild(t);
-    setTimeout(function () { t.remove(); }, 1800);
-  });
 
   // sections rise gently into view
   var blocs = document.querySelectorAll('.monte');

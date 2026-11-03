@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faites un don — Bileyi ya Bana</title>
+<meta name="description" content="Soutenir Bileyi ya Bana par M-Pesa ou Orange Money.">
+<meta name="theme-color" content="#0b1a5c">
+<link rel="icon" type="image/png" href="img/logo-96.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* the same palette as index.html */
+:root {
+  --night: #071345; --royal: #053dac; --indigo: #352abd; --violet: #6418cc;
+  --paper: #f6f2ea; --surface: #fff; --line: #e6dece; --ink: #1c1a2c; --muted: #615c6e; --link: #1f3fb0;
+  --serif: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --ui: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --shadow: 0 1px 2px rgba(20, 18, 50, .06), 0 12px 32px -12px rgba(20, 18, 50, .18);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0b1233; --surface: #141d4a; --line: #253065; --ink: #eceaf7; --muted: #a6a9c8; --link: #9db4ff;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 14px 36px -14px rgba(0, 0, 0, .6);
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--ui); }
+img { max-width: 100%; display: block; }
+a { color: var(--link); text-underline-offset: .18em; }
+:focus-visible { outline: 3px solid #e2b23f; outline-offset: 3px; border-radius: 6px; }
+.wrap { width: min(48rem, 100% - 2rem); margin-inline: auto; }
+
+.tete { color: #fff; background: linear-gradient(165deg, #050e38, #1a1c86 70%, #3a1aa3); padding: 1.1rem 0 3.2rem; }
+.tete nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 2.2rem; }
+.brand { display: inline-flex; align-items: center; gap: .7rem; color: #fff; text-decoration: none; }
+.brand img { width: 44px; height: 44px; border-radius: 12px; }
+.brand b { font: 700 1.5rem/1 var(--serif); }
+.retour { color: #fff; font-weight: 700; text-decoration: none; padding: .45rem 1rem; border-radius: 999px;
+  background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .3); }
+.retour:hover { background: rgba(255, 255, 255, .18); }
+h1 { margin: 0 0 .6rem; font: 700 clamp(2.3rem, 7vw, 3.4rem)/1.05 var(--serif); }
+.tete p { margin: 0; max-width: 34rem; color: rgba(255, 255, 255, .85); font-size: 1.08rem; }
+
+.cartes { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.2rem; margin-top: -1.8rem; }
+.carte { display: flex; flex-direction: column; align-items: center; padding: 1.1rem 1.1rem 1.4rem; border: 1px solid var(--line);
+  border-radius: 24px; background: var(--surface); box-shadow: var(--shadow); text-align: center; }
+/* the logo as given (its own white or black background), rounded */
+.logo { display: flex; justify-content: center; width: 100%; height: 11rem; margin: 0 0 1rem; }
+.logo img { height: 100%; width: auto; max-width: 100%; object-fit: contain; border-radius: 16px; }
+.carte h2 { margin: 0; font-size: 1.15rem; }
+.num { margin: .1rem 0 1rem; font-size: 1.6rem; font-weight: 800; letter-spacing: .02em; font-variant-numeric: tabular-nums lining-nums; }
+.copier { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; width: 100%; padding: 0 1.4rem;
+  border: 0; border-radius: 999px; cursor: pointer; font: 800 1rem var(--ui); color: #fff;
+  background: linear-gradient(135deg, var(--royal), var(--indigo) 55%, var(--violet)); box-shadow: 0 10px 24px -10px rgba(53, 42, 189, .75); }
+.copier:hover { box-shadow: 0 16px 30px -12px rgba(53, 42, 189, .9); }
+.contact { margin: 2rem 0 3rem; text-align: center; color: var(--muted); }
+.contact a { font-weight: 700; }
+.toast { position: fixed; left: 50%; bottom: 1.5rem; z-index: 9; transform: translateX(-50%); padding: .7rem 1.2rem; border-radius: 999px;
+  background: #1c1a2c; color: #fff; font-weight: 700; box-shadow: var(--shadow); }
+</style>
+</head>
+<body>
+<header class="tete">
+  <div class="wrap">
+    <nav aria-label="Navigation">
+      <a class="brand" href="./"><img src="img/logo-96.png" width="44" height="44" alt=""><b>Bileyi ya Bana</b></a>
+      <a class="retour" href="./">Retour</a>
+    </nav>
+    <h1>Faites un don</h1>
+    <p>Pour soutenir Bileyi ya Bana, envoyez votre don par mobile money à l’un de ces numéros.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="cartes">
+    <section class="carte">
+      <p class="logo"><img src="img/don-mpesa.jpg" width="485" height="412" alt="M-Pesa"></p>
+      <h2>M-Pesa</h2>
+      <p class="num">+243 820 366 841</p>
+      <button type="button" class="copier" data-copy="+243820366841">Copier le numéro</button>
+    </section>
+    <section class="carte">
+      <p class="logo"><img src="img/don-orange-money.jpg" width="450" height="371" alt="Orange Money"></p>
+      <h2>Orange Money</h2>
+      <p class="num">0840 380 701</p>
+      <button type="button" class="copier" data-copy="0840380701">Copier le numéro</button>
+    </section>
+  </div>
+  <p class="contact">Une question ? Écrivez sur <a href="https://wa.me/243820366841">WhatsApp +243 820 366 841</a>.</p>
+</main>
+
+<script>
+// a number is copied when its button is touched, to paste it in M-Pesa or Orange Money
+document.addEventListener('click', function (e) {
+  var b = e.target.closest && e.target.closest('[data-copy]');
+  if (!b) return;
+  var num = b.getAttribute('data-copy'), t = document.createElement('div');
+  if (navigator.clipboard) navigator.clipboard.writeText(num).catch(function () {});
+  t.className = 'toast';
+  t.setAttribute('role', 'status');
+  t.textContent = 'Numéro copié : ' + num;
+  document.body.appendChild(t);
+  setTimeout(function () { t.remove(); }, 1800);
+});
+</script>
+</body>
+</html>
