@@ -240,6 +240,25 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
 .don .ic { width: 1.2rem; height: 1.2rem; fill: #ff5c8a; stroke: #ff5c8a; }
 .pied .dons { flex-basis: 100%; justify-content: center; margin: 0; padding-top: 1.2rem; border-top: 1px solid rgba(255, 255, 255, .15); }
 
+/* the comment form: the messages go to the Netlify function (netlify/functions/retours.mjs), read on gestion.html */
+#commentaire { padding-top: 4.5rem; }
+.avis { display: grid; gap: 1rem; max-width: 44rem; margin: 0 auto; padding: 1.6rem; border-radius: 26px; background: var(--surface);
+  border: 1px solid var(--line); box-shadow: var(--shadow); }
+.avis .champs { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.avis label { display: grid; gap: .35rem; font-weight: 800; font-size: .95rem; }
+.avis small { font-weight: 600; color: var(--muted); }
+.avis input, .avis textarea { width: 100%; padding: .75rem .9rem; border: 1.5px solid var(--line); border-radius: 14px; font: 400 1rem/1.5 var(--ui);
+  color: var(--ink); background: var(--paper2); }
+.avis textarea { resize: vertical; min-height: 8rem; }
+.avis input:focus, .avis textarea:focus { outline: none; border-color: var(--indigo); }
+.avis .piege { position: absolute; left: -9999px; }
+.avis .envoi { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin: 0; }
+.avis .envoi .btn { width: auto; min-width: 10rem; }
+.avis .etat { color: var(--muted); font-weight: 700; }
+.avis .etat.ok { color: #1b8a3e; }
+.avis .etat.err { color: #c62828; }
+@media (max-width: 560px) { .avis { padding: 1.2rem; } .avis .champs { grid-template-columns: 1fr; } .avis .envoi .btn { width: 100%; } }
+
 /* gentle reveal while scrolling (only with JS, and not when the visitor asks for less motion) */
 @media (prefers-reduced-motion: no-preference) {
   html.js .monte { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
@@ -498,12 +517,30 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
       <p class="nouveau monte"><b>Nouveau :</b> sur iPhone et iPad, l’application s’installe sans ordinateur, depuis Safari. <b>Depuis la version 1.2.1 :</b> l’application se met à jour toute seule, sans réinstaller ; une citation copiée porte son titre, sa date et son auteur ; les favoris sont rangés par sections ; et toute la bibliothèque se lit aussi <a href="https://fabonk.github.io/bileyi-ya-bana/">en ligne</a>.</p>
     </div>
   </section>
+  <section id="commentaire" aria-labelledby="t-commentaire">
+    <div class="wrap">
+      <div class="titre monte">
+        <span class="petit">Votre avis</span>
+        <h2 id="t-commentaire">Laisser un commentaire</h2>
+        <p>Une remarque, une erreur dans un texte, une idée ? Votre message est lu par l’équipe de Bileyi ya Bana ; il n’est pas publié.</p>
+      </div>
+      <form class="avis monte" id="avis" novalidate>
+        <div class="champs">
+          <label><span>Votre nom <small>(facultatif)</small></span><input name="nom" maxlength="80" autocomplete="name"></label>
+          <label><span>Téléphone ou e-mail <small>(facultatif, pour vous répondre)</small></span><input name="contact" maxlength="120" autocomplete="tel"></label>
+        </div>
+        <label>Votre message<textarea name="message" rows="5" maxlength="3000" required></textarea></label>
+        <label class="piege" aria-hidden="true">Ne pas remplir<input name="site_web" tabindex="-1" autocomplete="off"></label>
+        <p class="envoi"><button class="btn btn-blue" type="submit">Envoyer</button><span class="etat" role="status"></span></p>
+      </form>
+    </div>
+  </section>
 </main>
 
 <footer class="pied">
   <div class="wrap">
     <a class="brand" href="#"><img src="img/logo-96.png" width="44" height="44" alt=""><b>Bileyi ya Bana</b></a>
-    <p>© 2026 Bileyi ya Bana</p>
+    <p>© 2026 Bileyi ya Bana · <a href="#commentaire">Laisser un commentaire</a></p>
     <a class="wa" href="https://wa.me/243820366841"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>WhatsApp +243 820 366 841</a>
     <p class="dons"><a class="don" href="don.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.1A4.4 4.4 0 0 1 12 7.3a4.4 4.4 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg>Faites un don</a></p>
   </div>
@@ -567,6 +604,23 @@ kbd { font: 700 .88em var(--ui); padding: .05em .45em; border-radius: 6px; backg
     };
     document.head.appendChild(s);
   }
+
+  // the comment form: sent to the Netlify function; the time it took tells people from robots
+  var avis = document.getElementById('avis'), vu = Date.now();
+  if (avis) avis.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var etat = avis.querySelector('.etat'), bouton = avis.querySelector('button'), f = avis.elements;
+    if (f.message.value.trim().length < 2) { etat.className = 'etat err'; etat.textContent = 'Écrivez votre message.'; f.message.focus(); return; }
+    bouton.disabled = true;
+    etat.className = 'etat';
+    etat.textContent = 'Envoi…';
+    fetch('/api/commentaire', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({
+      nom: f.nom.value, contact: f.contact.value, message: f.message.value, site_web: f.site_web.value, t: Date.now() - vu }) })
+      .then(function (r) { if (!r.ok) throw r; })
+      .then(function () { avis.reset(); etat.className = 'etat ok'; etat.textContent = 'Merci, votre message a bien été envoyé.'; },
+        function () { etat.className = 'etat err'; etat.textContent = 'Le message n’est pas parti : vérifiez la connexion et réessayez.'; })
+      .then(function () { bouton.disabled = false; });
+  });
 
   // sections rise gently into view
   var blocs = document.querySelectorAll('.monte');

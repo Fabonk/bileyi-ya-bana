@@ -17,6 +17,9 @@ mois (à peu près 70 téléchargements de l'APK), alors que les « releases » 
 | `public/don.html` | la page « Faites un don » : les numéros M-Pesa et Orange Money, avec leurs logos (`img/don-*.jpg`), copiés d'un geste |
 | `public/img/` | logo, favicon, captures de l'application (`app-accueil.jpg`, `app-sermon.jpg`) et image d'aperçu pour WhatsApp/Facebook (`og.jpg`, 1200×630) |
 | `netlify/edge-functions/ia.js` | le relais du Chat IA (voir plus bas), à l'adresse `/api/ia/gemini` et `/api/ia/openrouter` |
+| `netlify/functions/retours.mjs` | les commentaires de la page et le compte des installations de l'application web (voir plus bas) |
+| `public/gestion.html` | la page privée du responsable : téléchargements, installations, commentaires |
+| `package.json` | la bibliothèque `@netlify/blobs` (le stockage des commentaires) : `npm install` avant de déployer |
 | `netlify.toml` | dit à Netlify de publier `public/` |
 
 ## Le relais du Chat IA
@@ -35,6 +38,22 @@ netlify deploy --prod --dir public
 ```
 
 Une clé changée ne sert qu'après un nouveau `netlify deploy --prod`. Pas besoin de refaire les applications.
+
+## Commentaires et statistiques (pour le responsable seul)
+
+- Le formulaire « Laisser un commentaire » de la page envoie le message à `/api/commentaire`. Il est gardé chez
+  Netlify (Netlify Blobs, magasin `commentaires`) et n'est publié nulle part. Un champ caché et le temps de saisie
+  écartent les robots.
+- L'application web (le site ajouté à l'écran d'accueil, surtout sur iPhone) se signale une fois par téléphone à
+  `/api/installation` (un numéro au hasard, rien d'autre) : magasin `installations`.
+- La page privée `gestion.html` montre les téléchargements de chaque installateur, version par version (chiffres de
+  GitHub), les installations de l'application web et les commentaires (avec le lieu approximatif, l'appareil, et un
+  bouton pour supprimer). Elle s'ouvre avec le lien personnel `https://bileyiyabana.netlify.app/gestion.html#<clé>`,
+  qui garde ensuite la clé sur l'appareil. La clé n'est écrite nulle part dans le code : seulement son empreinte
+  SHA-256 (`OWNER` dans `retours.mjs`).
+- Changer la clé : `python -c "import secrets,hashlib;t=secrets.token_urlsafe(24);print(t);print(hashlib.sha256(t.encode()).hexdigest())"`,
+  mettre la 2e ligne dans `OWNER`, déployer, et ouvrir `gestion.html#<1re ligne>`.
+- Voir ou vider les magasins à la main : `netlify blobs:list commentaires`, `netlify blobs:delete commentaires <clé>`.
 
 La page reconnaît l'appareil du visiteur : sa carte passe en premier, et le grand bouton du haut télécharge directement
 le bon fichier (sur iPhone, il ouvre les étapes d'installation : la bibliothèque en ligne ajoutée à l'écran d'accueil

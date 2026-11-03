@@ -13,3 +13,10 @@
   for = "/img/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# the owner's page: never in search engines
+[[headers]]
+  for = "/gestion.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"

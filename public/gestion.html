@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Gestion — Bileyi ya Bana</title>
+<link rel="icon" type="image/png" href="img/logo-96.png">
+<style>
+/* The owner's page: downloads of each installer (GitHub), installations of the web app and the comments left on the
+   download page (netlify/functions/retours.mjs). Opened with the owner's key: gestion.html#<clé>, kept on this device. */
+:root {
+  --paper: #f6f2ea; --surface: #fff; --line: #e6dece; --ink: #1c1a2c; --muted: #615c6e; --link: #1f3fb0; --soft: #eceefb;
+  --accent: #352abd; --new: #e2b23f; --ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #0b1233; --surface: #141d4a; --line: #253065; --ink: #eceaf7; --muted: #a6a9c8; --link: #9db4ff; --soft: #1b2658;
+    --accent: #9db4ff; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.5 var(--ui); }
+a { color: var(--link); }
+.wrap { width: min(60rem, 100% - 2rem); margin: 0 auto; padding: 1.5rem 0 3rem; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+header h1 { margin: 0; font-size: 1.6rem; }
+header img { width: 40px; height: 40px; border-radius: 10px; vertical-align: middle; margin-right: .6rem; }
+button { font: 700 .92rem var(--ui); padding: .5rem 1rem; border-radius: 999px; border: 1.5px solid var(--line); background: var(--surface);
+  color: var(--ink); cursor: pointer; }
+button:hover { border-color: var(--accent); }
+section { margin-top: 1.6rem; padding: 1.2rem 1.3rem; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); }
+h2 { margin: 0 0 .8rem; font-size: 1.2rem; }
+.note { color: var(--muted); font-size: .9rem; margin: .6rem 0 0; }
+.tableau { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th, td { padding: .5rem .4rem; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+td small { display: block; color: var(--muted); font-size: .75rem; }
+th:first-child, td:first-child { text-align: left; }
+thead th { font-size: .85rem; color: var(--muted); }
+tfoot td { font-weight: 800; border-bottom: 0; }
+.chiffres { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; }
+.chiffre { padding: .9rem 1rem; border-radius: 14px; background: var(--soft); }
+.chiffre b { display: block; font-size: 1.7rem; line-height: 1.1; }
+.chiffre span { color: var(--muted); font-size: .85rem; }
+@media (max-width: 480px) { .chiffre { padding: .7rem .7rem; } }
+.com { padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.com:last-child { border-bottom: 0; padding-bottom: 0; }
+.com .tete { display: flex; flex-wrap: wrap; gap: .3rem .8rem; align-items: baseline; }
+.com .qui { font-weight: 800; }
+.com .meta { color: var(--muted); font-size: .85rem; }
+.com .nouv { font-size: .72rem; font-weight: 800; padding: .1rem .5rem; border-radius: 999px; background: var(--new); color: #241900; }
+.com p { margin: .45rem 0 .5rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.com .actions { display: flex; gap: .6rem; flex-wrap: wrap; align-items: center; font-size: .9rem; }
+.com .actions button { padding: .3rem .8rem; font-size: .82rem; }
+form.cle { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1rem; }
+form.cle input { flex: 1; min-width: 14rem; padding: .6rem .9rem; border-radius: 12px; border: 1.5px solid var(--line); font: inherit;
+  background: var(--paper); color: var(--ink); }
+.err { color: #c62828; font-weight: 700; }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1><img src="img/logo-96.png" alt="">Gestion de Bileyi ya Bana</h1>
+    <p><button type="button" id="actualiser" hidden>Actualiser</button> <button type="button" id="oublier" hidden>Oublier la clé sur cet appareil</button></p>
+  </header>
+
+  <section id="connexion" hidden>
+    <h2>Clé d’accès</h2>
+    <p>Cette page est réservée. Ouvrez-la avec votre lien personnel, ou collez la clé ci-dessous.</p>
+    <form class="cle" id="form-cle"><input id="cle" type="password" placeholder="Clé" autocomplete="current-password"><button>Ouvrir</button></form>
+    <p class="err" id="err-cle" hidden></p>
+  </section>
+
+  <section id="telechargements">
+    <h2>Téléchargements des installateurs</h2>
+    <div class="tableau"><table>
+      <thead><tr><th>Version</th><th>Android</th><th>iPhone</th><th>Windows</th><th>Total</th></tr></thead>
+      <tbody id="dl-lignes"><tr><td colspan="5">Chargement…</td></tr></tbody>
+      <tfoot><tr id="dl-total"></tr></tfoot>
+    </table></div>
+    <p class="note">Android : fichier APK ; iPhone : fichier IPA (Sideloadly) ; Windows : installateur. Nombre de fois où chaque fichier a été téléchargé depuis GitHub (une personne qui télécharge deux fois compte deux fois). Les mises à jour automatiques des applications ne passent pas par là et ne sont pas comptées.</p>
+  </section>
+
+  <section id="installations" hidden>
+    <h2>Application web (iPhone sans ordinateur)</h2>
+    <div class="chiffres" id="inst-chiffres"></div>
+    <p class="note" id="inst-mois"></p>
+    <p class="note">Chaque téléphone qui ouvre la bibliothèque depuis son écran d’accueil est compté une fois.</p>
+  </section>
+
+  <section id="commentaires" hidden>
+    <h2>Commentaires <span id="com-nb"></span></h2>
+    <div id="com-liste"></div>
+  </section>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var KEY = 'byb.gestion', SEEN = 'byb.gestion.vu';
+  function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function put(k, v) { try { if (v == null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { /* private mode */ } }
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function nb(n) { return Number(n || 0).toLocaleString('fr-FR'); }
+
+  // the key comes with the personal link (#…), then stays on this device; the address loses it at once
+  var cle = location.hash.slice(1) || get(KEY) || '';
+  if (location.hash) history.replaceState(null, '', location.pathname);
+
+  // ---------------------------------------------------------------- downloads: GitHub counts each file of each release
+  var KINDS = [['android', /-android\.apk$/], ['iphone', /-iphone\.ipa$/], ['windows', /-windows-setup\.exe$/]];
+  fetch('https://api.github.com/repos/Fabonk/bileyi-ya-bana/releases?per_page=100').then(function (r) {
+    if (!r.ok) throw r;
+    return r.json();
+  }).then(function (releases) {
+    var total = { android: 0, iphone: 0, windows: 0 }, rows = '';
+    releases.forEach(function (rel) {
+      var n = { android: 0, iphone: 0, windows: 0 };
+      rel.assets.forEach(function (a) {
+        KINDS.forEach(function (k) { if (k[1].test(a.name)) n[k[0]] += a.download_count; });
+      });
+      KINDS.forEach(function (k) { total[k[0]] += n[k[0]]; });
+      rows += '<tr><td>' + esc(rel.tag_name.replace(/^v/, '')) + '<small>' + new Date(rel.published_at).toLocaleDateString('fr-FR') + '</small></td>'
+        + '<td>' + nb(n.android) + '</td><td>' + nb(n.iphone) + '</td><td>' + nb(n.windows) + '</td><td>' + nb(n.android + n.iphone + n.windows) + '</td></tr>';
+    });
+    $('dl-lignes').innerHTML = rows || '<tr><td colspan="5">Aucune version publiée.</td></tr>';
+    $('dl-total').innerHTML = '<td>Total</td><td>' + nb(total.android) + '</td><td>' + nb(total.iphone) + '</td><td>' + nb(total.windows)
+      + '</td><td>' + nb(total.android + total.iphone + total.windows) + '</td>';
+  }).catch(function () {
+    $('dl-lignes').innerHTML = '<tr><td colspan="5" class="err">GitHub ne répond pas (connexion, ou trop de demandes : réessayez dans une heure).</td></tr>';
+  });
+
+  // ---------------------------------------------------------------- comments and installations: the owner's key
+  function load() {
+    if (!cle) { $('connexion').hidden = false; return; }
+    fetch('/api/gestion', { headers: { authorization: 'Bearer ' + cle }, cache: 'no-store' }).then(function (r) {
+      if (r.status === 401) { put(KEY, null); cle = ''; $('err-cle').textContent = 'Cette clé n’est pas la bonne.'; $('err-cle').hidden = false; throw 0; }
+      if (!r.ok) throw r;
+      return r.json();
+    }).then(function (data) {
+      put(KEY, cle);
+      $('connexion').hidden = true;
+      $('actualiser').hidden = $('oublier').hidden = false;
+      showInstalls(data.installations || {});
+      showComments(data.commentaires || []);
+    }).catch(function (e) {
+      $('connexion').hidden = false;
+      if (e !== 0) { $('err-cle').textContent = 'Le serveur ne répond pas : vérifiez la connexion.'; $('err-cle').hidden = false; }
+    });
+  }
+  function showInstalls(inst) {
+    var names = { iphone: 'iPhone et iPad', android: 'Android', autre: 'Autres appareils' }, html = '', months = {};
+    ['iphone', 'android', 'autre'].forEach(function (k) {
+      var it = inst[k] || { total: 0, mois: {} };
+      html += '<div class="chiffre"><b>' + nb(it.total) + '</b><span>' + names[k] + '</span></div>';
+      Object.keys(it.mois).forEach(function (m) { months[m] = (months[m] || 0) + it.mois[m]; });
+    });
+    $('inst-chiffres').innerHTML = html;
+    var ms = Object.keys(months).sort().reverse().slice(0, 12);
+    $('inst-mois').textContent = ms.length ? 'Par mois : ' + ms.map(function (m) {
+      return new Date(m + '-01T12:00:00').toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' }) + ' : ' + months[m];
+    }).join(' · ') : '';
+    $('installations').hidden = false;
+  }
+  function contactLink(c) {
+    if (/@/.test(c)) return '<a href="mailto:' + esc(c) + '">' + esc(c) + '</a>';
+    var digits = c.replace(/[^\d+]/g, '');
+    if (digits.replace(/\D/g, '').length >= 8) {
+      var wa = digits.replace(/^\+/, '').replace(/^0/, '243');
+      return '<a href="tel:' + esc(digits) + '">' + esc(c) + '</a> · <a href="https://wa.me/' + esc(wa) + '">WhatsApp</a>';
+    }
+    return esc(c);
+  }
+  function showComments(list) {
+    var seen = get(SEEN) || '';
+    $('com-nb').textContent = '(' + list.length + ')';
+    $('com-liste').innerHTML = list.length ? list.map(function (c) {
+      var d = new Date(c.date);
+      return '<article class="com" data-id="' + esc(c.id) + '"><div class="tete"><span class="qui">' + esc(c.nom || 'Anonyme') + '</span>'
+        + (c.date > seen ? '<span class="nouv">nouveau</span>' : '')
+        + '<span class="meta">' + d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) + ' à '
+        + d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }) + (c.lieu ? ' · ' + esc(c.lieu) : '')
+        + (c.appareil ? ' · ' + esc(c.appareil) : '') + '</span></div>'
+        + '<p>' + esc(c.message) + '</p><div class="actions">' + (c.contact ? '<span>' + contactLink(c.contact) + '</span>' : '')
+        + '<button type="button" data-suppr>Supprimer</button></div></article>';
+    }).join('') : '<p class="note">Aucun commentaire pour le moment.</p>';
+    $('commentaires').hidden = false;
+    if (list.length) put(SEEN, list[0].date);  // the next visit marks what came after
+  }
+  $('com-liste').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-suppr]');
+    if (!b) return;
+    var art = b.closest('.com');
+    if (!confirm('Supprimer ce commentaire ? Il sera perdu.')) return;
+    fetch('/api/gestion?id=' + encodeURIComponent(art.getAttribute('data-id')), { method: 'DELETE', headers: { authorization: 'Bearer ' + cle } })
+      .then(function (r) { if (!r.ok) throw r; art.remove(); })
+      .catch(function () { alert('La suppression n’a pas marché : réessayez.'); });
+  });
+  $('form-cle').addEventListener('submit', function (e) {
+    e.preventDefault();
+    cle = $('cle').value.trim();
+    $('err-cle').hidden = true;
+    load();
+  });
+  $('actualiser').addEventListener('click', load);
+  $('oublier').addEventListener('click', function () { put(KEY, null); put(SEEN, null); location.reload(); });
+  load();
+})();
+</script>
+</body>
+</html>

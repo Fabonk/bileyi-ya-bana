@@ -1,3 +1,4 @@
 .release-*/
 .netlify/
 public/fichiers/
+node_modules/

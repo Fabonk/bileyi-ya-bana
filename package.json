@@ -1,0 +1,9 @@
+{
+  "name": "bileyi-ya-bana-page",
+  "private": true,
+  "description": "Page de téléchargement de Bileyi ya Bana : ses fonctions Netlify (commentaires, compteurs)",
+  "type": "module",
+  "dependencies": {
+    "@netlify/blobs": "11.1.7"
+  }
+}
