@@ -14,7 +14,7 @@ mois (à peu près 70 téléchargements de l'APK), alors que les « releases » 
 | Fichier | Rôle |
 |---|---|
 | `public/index.html` | la page entière (styles et script compris) ; les liens de téléchargement pointent vers la release GitHub |
-| `public/don.html` | la page « Faites un don » : les numéros M-Pesa et Orange Money, avec leurs logos (`img/don-*.jpg`), copiés d'un geste |
+| `public/don.html` | la page « Faire un don » : les numéros M-Pesa et Orange Money, avec leurs logos (`img/don-*.jpg`), copiés d'un geste |
 | `public/img/` | logo, favicon, captures de l'application (`app-accueil.jpg`, `app-sermon.jpg`) et image d'aperçu pour WhatsApp/Facebook (`og.jpg`, 1200×630) |
 | `netlify/edge-functions/ia.js` | le relais du Chat IA (voir plus bas), à l'adresse `/api/ia/gemini` et `/api/ia/openrouter` |
 | `netlify/functions/retours.mjs` | les commentaires de la page et le compte des installations de l'application web (voir plus bas) |
