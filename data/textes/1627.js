@@ -1,0 +1,1 @@
+BYB.txt(1627,[[1,0,"Inonde mon âme"],[2,0,"Inonde mon âme, inonde mon âme,"],[3,0,"Doux Esprit, inonde mon âme;"],[4,0,"Assis à Tes pieds, mon repos est parfait;"],[5,0,"Doux Esprit, inonde mon âme."]]);

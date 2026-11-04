@@ -1,0 +1,1 @@
+BYB.txt(1497,[[1,0,"Ce monde ne peut me lier"],[2,0,"Ce vieux monde ne peut me lier,"],[3,0,"Je m’en irai n’importe quand,"],[4,0,"Parce que je me suis consacré"],[5,0,"Et je porte mon habit de noces."]]);

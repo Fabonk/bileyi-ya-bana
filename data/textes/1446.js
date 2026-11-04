@@ -1,0 +1,1 @@
+BYB.txt(1446,[[1,0,"Attendris donc mon cœur"],[2,0,"Attendris donc mon cœur,"],[3,0,"Révèle-moi Seigneur,"],[4,0,"Ta grâce et Ta pureté;"],[5,0,"Que je puisse plier"],[6,0,"Devant Ta volonté,"],[7,0,"Glorifier Ton doux Nom, Jésus."]]);

@@ -1,0 +1,1 @@
+BYB.txt(2187,[[1,0,"Yoka ntina y’esengo na nga"],[2,0,"Yaka ntina y’esengo na ngai,"],[3,0,"Yesu Alimbisi masumu na nga ;"],[4,0,"Mpe sik’awa na jali koyemba"],[5,0,"Bolingo monene na Yesu"],[6,0,"Yesu Alongoli na motema na nga ;"],[7,0,"Mokumba monene mpe na jui kimia ;"],[8,0,"Mpe sik’awa na jali koyemba"],[9,0,"Bolingo monene na Yesu"]]);

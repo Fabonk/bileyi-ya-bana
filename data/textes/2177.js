@@ -1,0 +1,1 @@
+BYB.txt(2177,[[1,0,"Yesu molongi"],[2,0,"Yesu molongi (3x) ya satana (2x)"],[3,0,"Aleluya (4x)"],[4,0,"Yesu molongi ya satana"],[5,0,"Yesu alongisi (3x) mondimi (2x)"],[6,0,"Aleluya (4x)"],[7,0,"Yesu alongisi mondimi"],[8,0,"Nguya na kombo (3x) na Yesu"],[9,0,"(2x)"],[10,0,"Aleluya (4x)"],[11,0,"Nguya na kombo na Yesu"]]);

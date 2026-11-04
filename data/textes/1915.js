@@ -1,0 +1,1 @@
+BYB.txt(1915,[[1,0,"Nous te louons"],[2,0,"Nous te louons"],[3,0,"Nous te louons"],[4,0,"Roi de nos cœurs,"],[5,0,"Nous t’adorons …"],[6,0,"Nous t’elevons …"],[7,0,"Nous t’exaltons …"],[8,0,"Tu es digne …"]]);

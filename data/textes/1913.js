@@ -1,0 +1,1 @@
+BYB.txt(1913,[[1,0,"Nous sommes les enfants du père"],[2,0,"Nous sommes les enfants du père, cohéritiers avec le fils."],[3,0,"Nous sommes sujets de son royaume"],[4,0,"Nous sommes une famille,"],[5,0,"Nous sommes un."]]);

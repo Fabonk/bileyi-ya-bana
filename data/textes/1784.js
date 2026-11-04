@@ -1,0 +1,1 @@
+BYB.txt(1784,[[1,0,"Le Seigneur seul éclaire"],[2,0,"Le Seigneur seul éclaire mon chemin"],[3,0,"Sa Parole c’est le feu (2x)"],[4,0,"Sa Parole (3x) C’est le feu (2x)"],[5,0,"Nkolo angengisi njela na ngai"],[6,0,"Liloba ezali mwinda (2x)"],[7,0,"Liloba, liloba, liloba ezali mwinda"]]);

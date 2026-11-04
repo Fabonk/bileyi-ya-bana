@@ -1,0 +1,1 @@
+BYB.txt(1703,[[1,0,"Jésus est tout pour moi"],[2,0,"Jésus est tout"],[3,0,"Jésus est tout pour moi,"],[4,0,"Jésus est tout"],[5,0,"Jésus est tout pour moi"],[6,0,"Car il est mon père, et ma mère"],[7,0,"Et ma sœur et mon frère Jésus est tout pour moi."]]);

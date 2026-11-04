@@ -1,0 +1,1 @@
+BYB.txt(2164,[[1,0,"Voici le jour"],[2,0,"Voici le jour, voici le jour"],[3,0,"Fait par le Seigneur,"],[4,0,"Fait par le Seigneur,"],[5,0,"Oh, oui ! Nous allons nous réjouir"],[6,0,"Et serons tout heureux, tout heureux !"],[7,0,"Voici le jour fait par le Seigneur,"],[8,0,"Oh, oui ! Nous allons nous réjouir"],[9,0,"Voici le jour, voici le jour"],[10,0,"Fait par le Seigneur !"]]);

@@ -1,0 +1,1 @@
+BYB.txt(1585,[[1,0,"Être sur ce roc"],[2,0,"Criant «Saint, Saint, Saint» au Seigneur,"],[3,0,"Criant «Saint, Saint, Saint» au Seigneur,"],[4,0,"Si possible, je voudrais bien"],[5,0,"Etre sur le même roc que Moïse."]]);

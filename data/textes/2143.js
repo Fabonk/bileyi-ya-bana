@@ -1,0 +1,1 @@
+BYB.txt(2143,[[1,0,"Une couronne"],[2,0,"Une couronne, Jésus la donne"],[3,0,"Au soldat de la croix"],[4,0,"Pour toi, pour moi"],[5,0,"Pour tous celui qui Combattra en son Nom"],[6,0,"Jésus donnera une couronne"],[7,0,"Motole Yesu akopese"],[8,0,"Na soda y’ekulusu"],[9,0,"Na yo, na ngai"],[10,0,"Na oyo alingi"],[11,0,"Koya na Yesu"],[12,0,"Akopesa ye motole"]]);
