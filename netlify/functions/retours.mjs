@@ -10,7 +10,7 @@ import { createHash, timingSafeEqual } from 'node:crypto';
 // read as written, not up to a minute late (the default of Netlify Blobs)
 const store = (name) => getStore({ name, consistency: 'strong' });
 
-const OWNER = 'f4b897566e8fa3024d1c4466d47e1eac55e74a2cacddc040c0284c271dc4c039';
+const OWNER = '3d6a3ce450c95df84e267222594e9b602161268138e33cac374d447c7b1703ec';
 // the download page (and its draft deploys), the site of the library, and a copy tried on this computer
 const PAGE = /^(https:\/\/([a-z0-9]+--)?bileyiyabana\.netlify\.app|http:\/\/(localhost|127\.0\.0\.1)(:\d+)?)$/;
 const SITE = /^(https:\/\/fabonk\.github\.io|http:\/\/(localhost|127\.0\.0\.1)(:\d+)?)$/;
