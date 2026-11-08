@@ -1,0 +1,1 @@
+BYB.txt(1937,[[1,0,"Oh Alléluia! quelle joie!"],[2,0,"Oh! Alléluia, quelle joie,"],[3,0,"Car Jésus vit! (Bis)"],[4,0,"Oh Alléluia, quelle joie"],[5,0,"Car Jésus vit en moi."],[6,0,"Oh Alléluia, quelle joie, Car Jésus vit!"],[7,0,"Je suis heureux"],[8,0,"Jésus vit en moi ter"],[9,0,"Chante gloire et Alléluia!"],[10,0,"Jésus vit en moi"]]);

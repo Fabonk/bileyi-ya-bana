@@ -1,0 +1,1 @@
+BYB.txt(1715,[[1,0,"Jésus mon Sauveur arrête"],[2,0,"Jésus mon Sauveur, arrête"],[3,0,"Tes pas à ma voix."],[4,0,"En bénissant d’autres, Maître,"],[5,0,"Ne m’oublie pas."],[6,0,"Jésus, Jésus, écoute ma voix!"],[7,0,"En bénissant d’autres, Maître"],[8,0,"Ne m’oublie pas !"]]);

@@ -1,0 +1,1 @@
+BYB.txt(1670,[[1,0,"Je peux croire, je croirai je crois"],[2,0,"Je peux croire, je croirai, je crois;"],[3,0,"Je peux croire, je croirai, je crois;"],[4,0,"Je peux croire, je croirai, je crois"],[5,0,"Que Jésus me guérit."],[6,0,"(Je ne me confie qu’en mon Seigneur..)"]]);

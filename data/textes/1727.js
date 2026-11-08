@@ -1,0 +1,1 @@
+BYB.txt(1727,[[1,0,"Kobanga eloko te"],[2,0,"Kobanga eloko te, jala na kimia Yesus ajali"],[3,0,"Tala se epayi na Ye Akosunga Yo"],[4,0,"Ye Molongo"],[5,0,"Kobanga moyini te, jala na kimia, o kolonga"],[6,0,"Na kombo oyo ya Yesu, moyini akimi"],[7,0,"Yo olongi(x2)"]]);

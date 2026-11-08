@@ -1,0 +1,1 @@
+BYB.txt(1938,[[1,0,"Oh! c’est Jésus !"],[2,0,"Oh! c’est Jésus ! oui, c’est Jésus !"],[3,0,"Oui, c’est Jésus dans mon âme;"],[4,0,"Car j’ai touché le bord de Son vêtement,"],[5,0,"Et Son sang m’a rétabli."]]);

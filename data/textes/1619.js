@@ -1,0 +1,1 @@
+BYB.txt(1619,[[1,0,"Il vient de nouveau"],[2,0,"Veux-tu être compté parmi Ses brebis?"],[3,0,"Veux-tu être compté parmi Ses brebis?"],[4,0,"Sois d’un coeur sans tache, veille et attends de voir cette apparition;"],[5,0,"Il vient de nouveau ."]]);

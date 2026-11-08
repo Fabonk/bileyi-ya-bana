@@ -1,0 +1,1 @@
+BYB.txt(1566,[[1,0,"Elonga na makila"],[2,0,"Elonga Na Makila, Aleluya !"],[3,0,"Na Makila na Yesu Mobikisi,"],[4,0,"Elonga Na Makila, Aleluya !"],[5,0,"Nkembo mpe lokumu na Mpate."],[6,0,"Mpate Nkembo!"],[7,0,"Nkembo Nkembo! Nguya na Mpate,"],[8,0,"Nkembo! Nkembo! Na Mpate,"],[9,0,"Elonga Na Makila, Aleluya !"],[10,0,"Nkembo mpe lokumu na Mpate."]]);

@@ -1,0 +1,1 @@
+BYB.txt(1954,[[1,0,"Oh! quel précieux amour!"],[2,0,"Oh! quel précieux amour du Père"],[3,0,"Pour la race déchue d’Adam,"],[4,0,"Laissant souffrir Son Fils Unique"],[5,0,"Pour nous racheter par Sa grâce!"]]);

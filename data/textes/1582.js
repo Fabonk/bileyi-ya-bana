@@ -1,0 +1,1 @@
+BYB.txt(1582,[[1,0,"Être comme Jésus"],[2,0,"Etre comme Jésus, alléluia,"],[3,0,"Etre comme Jésus"],[4,0,"Je veux être comme Jésus"],[5,0,"Dans toute ma vie"],[6,0,"Etre comme Jésus"],[7,0,"- Dans toute ma vie……."],[8,0,"- Dans mon travail…….."],[9,0,"- Dans mon quartier …..."],[10,0,"- Dans ma maison………"]]);

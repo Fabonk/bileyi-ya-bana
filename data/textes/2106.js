@@ -1,0 +1,1 @@
+BYB.txt(2106,[[1,0,"Tends la main et touche le Seigneur"],[2,0,"Tends la main, touche le Seigneur pendant qu’Il passe,"],[3,0,"Tu verras qu'Il n'est pas trop pris, Il entend ton cri;"],[4,0,"Pour pourvoir à tes besoins Il passe maintenant,"],[5,0,"Tends la main, touche le Seigneur pendant qu’Il passe."]]);

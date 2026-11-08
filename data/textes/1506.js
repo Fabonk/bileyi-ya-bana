@@ -1,0 +1,1 @@
+BYB.txt(1506,[[1,0,"Chaque promesse est mienne"],[2,0,"Chaque promesse dans le livre est mienne"],[3,0,"Chaque chapitre, chaque verset et Chaque ligne"],[4,0,"Oui, je crois en son amour divin"],[5,0,"Chaque promesse dans le livre est mienne"]]);

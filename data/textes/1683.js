@@ -1,0 +1,1 @@
+BYB.txt(1683,[[1,0,"Je suis un vainqueur"],[2,0,"Je suis un vainqueur"],[3,0,"Je suis un vainqueur"],[4,0,"Je suis un vainqueur"],[5,0,"Je suis un vainqueur"],[6,0,"Car j’aime Jésus"],[7,0,"Il est mon sauveur"],[8,0,"Il me sourit et m’aime aussi."]]);
