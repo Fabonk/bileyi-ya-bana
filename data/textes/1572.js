@@ -1,0 +1,1 @@
+BYB.txt(1572,[[1,0,"Enfermé avec Dieu"],[2,0,"Avec Dieu enfermé dans le secret,"],[3,0,"Là, dans l’Esprit, je contemple Sa face,"],[4,0,"Tirant de nouvelles forces pour faire la course,"],[5,0,"Oh! j’aime m’enfermer avec Dieu!"]]);

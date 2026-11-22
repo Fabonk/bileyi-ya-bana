@@ -1,0 +1,1 @@
+BYB.txt(1780,[[1,0,"Le sang de Jésus Christ"],[2,0,"Le sang de Jésus-Christ (2x)"],[3,0,"A purifié tous mes péchés"],[4,0,"Tous mes péchés (2x)"],[5,0,"Le sang de Jésus-christ (2x)"],[6,0,"A purifié tous mes péchés"],[7,0,"Makila na Yesu, makila na Yesu epetoli masumu na nga"],[8,0,"Nyoso penja, nasalaki"],[9,0,"Makila na Yesu, makila na Yesu epetoli masumu na nga"]]);

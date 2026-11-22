@@ -1,0 +1,1 @@
+BYB.txt(1868,[[1,0,"Nakamati njenje"],[2,0,"Nakamati njenje,"],[3,0,"Koyembela Ye,"],[4,0,"Koyemba Elonga"],[5,0,"Kino na Lola."],[6,0,"Mawa yonso esili,"],[7,0,"Esengo ezongi;"],[8,0,"Ngai nazwi ndako kuna na Lola,"],[9,0,"Pene na Yesu."]]);

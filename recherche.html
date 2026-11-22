@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr" data-root="" data-kind="recherche" data-section="recherche">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recherche · Bileyi ya Bana</title>
+<meta name="description" content="Recherche">
+<link rel="icon" href="assets/logo-96.png" type="image/png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<meta name="theme-color" content="#f5f3ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bileyi ya Bana">
+<link rel="stylesheet" href="assets/byb.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('byb.theme'),f=localStorage.getItem('byb.fs');d.className='js';if(t)d.setAttribute('data-theme',t);if(f)d.style.setProperty('--fs',f+'px')}catch(e){}</script>
+<script src="assets/byb.js" defer></script><script src="data/index/dir.js" defer></script><script src="data/catalogue.js" defer></script><script src="assets/moteur.js" defer></script><script src="assets/recherche.js" defer></script>
+</head>
+<body>
+<script src="assets/cadre.js"></script>
+<main id="main">
+
+<header class="page-head"><h1>Recherche</h1></header>
+<form class="search-form" id="sf">
+<div class="row"><input name="q" id="q" type="search" placeholder="Mots, « expression exacte », début de mot*" aria-label="Rechercher" autofocus><button>Rechercher</button></div>
+<div class="row opts">
+<label><input type="radio" name="m" value="texte" checked> Dans le texte</label>
+<label><input type="radio" name="m" value="titres"> Dans les titres</label>
+<span class="sep"></span>
+<label><input type="checkbox" name="t" value="0" checked> Sermons</label>
+<label><input type="checkbox" name="t" value="1" checked> Livres</label>
+<label><input type="checkbox" name="t" value="2" checked> Cantiques</label>
+<label><input type="checkbox" name="t" value="3"> Bible</label>
+</div>
+<div class="row opts">
+<label>Années <select name="a"><option value="">1947</option><option value="1947">1947</option><option value="1948">1948</option><option value="1949">1949</option><option value="1950">1950</option><option value="1951">1951</option><option value="1952">1952</option><option value="1953">1953</option><option value="1954">1954</option><option value="1955">1955</option><option value="1956">1956</option><option value="1957">1957</option><option value="1958">1958</option><option value="1959">1959</option><option value="1960">1960</option><option value="1961">1961</option><option value="1962">1962</option><option value="1963">1963</option><option value="1964">1964</option><option value="1965">1965</option></select></label>
+<label>à <select name="b"><option value="">1965</option><option value="1947">1947</option><option value="1948">1948</option><option value="1949">1949</option><option value="1950">1950</option><option value="1951">1951</option><option value="1952">1952</option><option value="1953">1953</option><option value="1954">1954</option><option value="1955">1955</option><option value="1956">1956</option><option value="1957">1957</option><option value="1958">1958</option><option value="1959">1959</option><option value="1960">1960</option><option value="1961">1961</option><option value="1962">1962</option><option value="1963">1963</option><option value="1964">1964</option><option value="1965">1965</option></select></label>
+<label>Ordre <select name="o"><option value="date">chronologique</option><option value="nb">nombre de passages</option></select></label>
+</div>
+</form>
+<details class="help"><summary>Comment chercher</summary>
+<ul><li>Plusieurs mots : les paragraphes qui contiennent tous ces mots (<i>colonne de feu</i>).</li>
+<li>Entre guillemets : l'expression exacte (<i>"la Parole parlée"</i>).</li>
+<li>Une étoile : tous les mots qui commencent ainsi (<i>prophét*</i>).</li>
+<li>Les accents et les majuscules ne comptent pas : <i>eglise</i> trouve « Église ».</li></ul></details>
+<div id="status" class="status" aria-live="polite"><noscript>La recherche a besoin de JavaScript.</noscript></div>
+<div id="results"></div>
+</main>
+
+</body>
+</html>

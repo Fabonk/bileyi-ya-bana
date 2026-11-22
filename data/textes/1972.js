@@ -1,0 +1,1 @@
+BYB.txt(1972,[[1,0,"Par le Nom de Jésus"],[2,0,"Par le Nom de Jésus"],[3,0,"Par le Nom de Jésus"],[4,0,"Dieu donne la victoire"],[5,0,"Par le Nom de Jésus"],[6,0,"Par le Nom de Jésus"],[7,0,"Dieu donne le victoire"],[8,0,"Quand satan nous tend un piège"],[9,0,"C’est ce Nom qui nous protège"],[10,0,"Ce beau Nom de la victoire"],[11,0,"Que chante les élus."]]);

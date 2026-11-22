@@ -1,0 +1,1 @@
+BYB.txt(1656,[[1,0,"Je l’aime"],[2,0,"Je l’aime, je l’aime"],[3,0,"Parce qu’il m’aima le premier"],[4,0,"Et acquis mon salut"],[5,0,"Sur le bois du calvaire."],[6,0,"Nalingi Ye, ngai nalingi Yesu"],[7,0,"Mpo y’alingaki nga liboso"],[8,0,"Asombi bomoi na ngai"],[9,0,"Likolo na ekulusu"]]);

@@ -1,0 +1,1 @@
+BYB.txt(1588,[[1,0,"Fils de Dieu en avant"],[2,0,"Fils de Dieu en avant, dans la puissance du Saint Esprit Fils de Dieu en avant car Jésus est toujours le même Fils de Dieu en avant,"],[3,0,"Nous avons la puissance en son sang. Fils de Dieu en avant."],[4,0,"Dans la puissance du Saint Esprit."]]);

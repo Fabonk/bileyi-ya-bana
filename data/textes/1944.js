@@ -1,0 +1,1 @@
+BYB.txt(1944,[[1,0,"Oh! oui, je triomphe !"],[2,0,"Oh! oui, je triomphe! oh! oui, je triomphe!"],[3,0,"Oh! oui, je triomphe! oh! oui, je triomphe!"],[4,0,"Car j’aime bien Jésus, Il est mon Sauveur,"],[5,0,"Il m’aime et me sourit ."]]);

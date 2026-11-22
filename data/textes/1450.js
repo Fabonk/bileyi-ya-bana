@@ -1,0 +1,1 @@
+BYB.txt(1450,[[1,0,"Au nom de Jésus"],[2,0,"Au nom de Jésus (2x)"],[3,0,"Nous avons la victoire"],[4,0,"Au nom de Jésus (2x) venez monter avec Lui."],[5,0,"Si nous avançons au Nom de Jésus, dites-moi qui peut résister ?"],[6,0,"Au nom puissant de Jésus Christ,"],[7,0,"Nous avons la victoire."]]);

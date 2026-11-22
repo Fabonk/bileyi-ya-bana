@@ -1,0 +1,1 @@
+BYB.txt(1671,[[1,0,"Je peux, je veux, je crois"],[2,0,"Je le peux, je le veux, et je le croix (3x) Jésus-Christ me guérit."],[3,0,"Je me confie en mon Seigneur"],[4,0,"(3x) Jésus-Christ me guérit."]]);

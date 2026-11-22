@@ -1,0 +1,1 @@
+BYB.txt(1414,[[1,0,"À Golgotha"],[2,0,"A Golgotha, Tu meurs pour moi"],[3,0,"Dans ton immense Amour"],[4,0,"Jésus mon Roi"],[5,0,"Je viens à Toi"],[6,0,"Pour T’aimer à mon tour"],[7,0,"Na Golgotha, oweli ngai"],[8,0,"Na bolingo na yo"],[9,0,"Yesu na ngai"],[10,0,"Nkolo na yei"],[11,0,"Mpo ete nalinga yo"]]);

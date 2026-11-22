@@ -1,0 +1,1 @@
+BYB.txt(2089,[[1,0,"Souriant, souriant"],[2,0,"Souriant, souriant,"],[3,0,"Le chrétien croit tout"],[4,0,"Et accepte tout"],[5,0,"Souriant, souriant"],[6,0,"Le chrétien prend tout"],[7,0,"Par le bon bout."]]);

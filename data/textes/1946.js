@@ -1,0 +1,1 @@
+BYB.txt(1946,[[1,0,"Oh quand je songe"],[2,0,"Oh, quand je songe à l’amour de Jésus,"],[3,0,"Et à tout ce que qu’il a fait pour moi"],[4,0,"Alors, je veux chanter, alléluia !"],[5,0,"Merci pour golgotha."],[6,0,"Oh nakamwe bolingo na Yesu"],[7,0,"Mpe nyoso asali mpo na nga"],[8,0,"Tika nga nayemba, aleluya"],[9,0,"Matondi mpo na Gologota"]]);

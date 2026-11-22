@@ -1,0 +1,1 @@
+BYB.txt(1606,[[1,0,"Il est toute chose"],[2,0,"Il est toute chose, Il est toute chose pour moi"],[3,0,"Il est toute chose, Il est toute chose pour moi"],[4,0,"Car il est mon père, ma mère,"],[5,0,"Ma sœur et mon frère,"],[6,0,"Il est toute chose pour moi."]]);

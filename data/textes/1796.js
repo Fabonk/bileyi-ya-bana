@@ -1,0 +1,1 @@
+BYB.txt(1796,[[1,0,"Likolo ezali"],[2,0,"Likolo ezali mboka na Yesu"],[3,0,"Esengo ejali kuna(2X)"],[4,0,"Esengo kuna na Lola (3X)"],[5,0,"Esengo Mboka na Yesu"],[6,0,"Yo tata, yo mama ndimela Yesu"],[7,0,"Okojala na esengo(2X)"],[8,0,"Yo ndeko yaka epai na Yesu"],[9,0,"Yaka Ye Ako bianga yo.(2X)"]]);

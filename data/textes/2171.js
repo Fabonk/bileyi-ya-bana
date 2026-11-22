@@ -1,0 +1,1 @@
+BYB.txt(2171,[[1,0,"Yesu ajali kobenga yo"],[2,0,"Yesu Ajali kobenga yo"],[3,0,"Elambo ebongisami"],[4,0,"Kojela lisusu lobi te"],[5,0,"Okoki kokota lelo"],[6,0,"Yaka epayi na Yesu jua mokano lelo ;"],[7,0,"Mpe ndima Sango Malamu,"],[8,0,"Oyo Apesi yo."]]);

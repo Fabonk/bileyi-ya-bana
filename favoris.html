@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr" data-root="" data-kind="favoris" data-section="favoris">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Favoris · Bileyi ya Bana</title>
+<meta name="description" content="Favoris">
+<link rel="icon" href="assets/logo-96.png" type="image/png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<meta name="theme-color" content="#f5f3ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bileyi ya Bana">
+<link rel="stylesheet" href="assets/byb.css">
+<script>try{var d=document.documentElement,t=localStorage.getItem('byb.theme'),f=localStorage.getItem('byb.fs');d.className='js';if(t)d.setAttribute('data-theme',t);if(f)d.style.setProperty('--fs',f+'px')}catch(e){}</script>
+<script src="assets/byb.js" defer></script>
+</head>
+<body>
+<script src="assets/cadre.js"></script>
+<main id="main">
+
+<header class="page-head"><h1>Favoris</h1>
+<p class="lead">Les pages et les paragraphes gardés avec ☆ (bouton « Favori », ou le numéro d'un paragraphe), et les passages
+surlignés (des mots sélectionnés dans un texte, ou le bouton « 🖍 Surligner »). Ils sont enregistrés dans ce navigateur seulement.</p></header>
+<div id="favs" class="favs"><noscript>Les favoris ont besoin de JavaScript.</noscript></div>
+<h2 class="js-only" data-hl-title hidden>Passages surlignés</h2>
+<div id="hls" class="favs"></div>
+<p class="actions js-only"><button type="button" data-act="export">Enregistrer une copie</button>
+<label class="button">Reprendre une copie<input type="file" accept="application/json" data-act="import" hidden></label></p>
+</main>
+
+</body>
+</html>

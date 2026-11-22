@@ -1,0 +1,1 @@
+BYB.txt(1720,[[1,0,"Jésus revient ! Alléluia!"],[2,0,"Jésus revient! Alléluia! (3X)"],[3,0,"Alléluia! Alléluia!"],[4,0,"Seras-tu prêt quand Il viendra?"],[5,0,"Seras-tu prêt quand Il viendra?"],[6,0,"Si tu es prêt, Il te prendra,"],[7,0,"Alléluia! Alléluia! Maranatha!"],[8,0,"Aleluya! (3x) Aleluya! Aleluya!"]]);

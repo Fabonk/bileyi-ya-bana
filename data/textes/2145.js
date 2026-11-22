@@ -1,0 +1,1 @@
+BYB.txt(2145,[[1,0,"Veilleras-tu avec moi ?"],[2,0,"Veilleras-tu avec moi une heure ?"],[3,0,"Comme je vais là-bas"],[4,0,"Comme je vais là-bas"],[5,0,"Veilleras-tu avec moi une heure ?"],[6,0,"Pendant que je vais prier ?"]]);

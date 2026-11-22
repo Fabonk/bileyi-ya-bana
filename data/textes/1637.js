@@ -1,0 +1,1 @@
+BYB.txt(1637,[[1,0,"J’ai traversé le voile fendu"],[2,0,"J’ai traversé le voile fendu où la gloire ne manque point,"],[3,0,"Alléluia, alléluia;"],[4,0,"J’ai traversé le voile fendu où la gloire ne manque point,"],[5,0,"Parce que je vis dans la présence du Roi."]]);

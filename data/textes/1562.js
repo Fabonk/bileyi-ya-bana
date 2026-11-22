@@ -1,0 +1,1 @@
+BYB.txt(1562,[[1,0,"Éclaire-moi"],[2,0,"Eclaire-moi, Seigneur, éclaire-moi,"],[3,0,"Laisse la lumière du phare m’éclairer;"],[4,0,"Eclaire-moi, Seigneur, éclaire-moi,"],[5,0,"Laisse la lumière du phare m’éclairer."]]);

@@ -1,0 +1,1 @@
+BYB.txt(2173,[[1,0,"Yesu Akoya Aleluya!"],[2,0,"Yesu Akoya, Aleluya (3x)"],[3,0,"Aleluya! Aleluya!"],[4,0,"Okokoka ntango Akoya?"],[5,0,"Okobonga ntango Akoya?"],[6,0,"Soki obongi Akozwa yo,"],[7,0,"Aleluya! Aleluya! Maranatha!"],[8,0,"Aleluya! (3x) Aleluya!Aleluya!"]]);

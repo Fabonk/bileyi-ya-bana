@@ -1,0 +1,1 @@
+BYB.txt(1521,[[1,0,"Conduis-moi Seigneur"],[2,0,"Conduis-moi Seigneur"],[3,0,"Oh ! Jésus conduit moi 2x"],[4,0,"Chaque jour, chaque nuit"],[5,0,"Par la force du Saint-Esprit"],[6,0,"Conduit moi, Ô Jésus conduit moi"],[7,0,"- Guide-moi Seigneur"],[8,0,"- Brise-moi Seigneur"],[9,0,"- Parle-moi Seigneur"]]);

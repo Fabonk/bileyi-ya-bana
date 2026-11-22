@@ -1,0 +1,1 @@
+BYB.txt(1912,[[1,0,"Nous rendrons gloire à Jésus"],[2,0,"Nous rendrons gloire à Jésus,"],[3,0,"Parlant de Son amour, parlant de Son amour;"],[4,0,"Nous rendrons gloire à Jésus,"],[5,0,"Parlant de Son merveilleux amour."]]);

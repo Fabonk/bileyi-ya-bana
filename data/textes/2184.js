@@ -1,0 +1,1 @@
+BYB.txt(2184,[[1,0,"Yesu telema liboso"],[2,0,"Yesu, telema liboso"],[3,0,"Na mongongo na ngai"],[4,0,"Ekopambola yo ba mosusu"],[5,0,"Bosana ngai te"],[6,0,"Yesu, Yesu,"],[7,0,"Yoka mongongo na ngai"],[8,0,"Ekopambola yo ba mosusu"],[9,0,"Bosana ngai te"]]);

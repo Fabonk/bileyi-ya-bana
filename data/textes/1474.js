@@ -1,0 +1,1 @@
+BYB.txt(1474,[[1,0,"Bientôt très bientôt"],[2,0,"Bientôt, très bientôt"],[3,0,"Nous verrons le Seigneur"],[4,0,"Bientôt, très bientôt"],[5,0,"Nous verrons le Seigneur"],[6,0,"Alléluia, Alléluia,"],[7,0,"Nous verrons le Seigneur"]]);

@@ -1,0 +1,1 @@
+BYB.txt(1493,[[1,0,"Car ta bonté"],[2,0,"Car ta bonté vaut mieux que la vie (x4)"],[3,0,"J’annoncerai ton nom à mes frères (x2)"],[4,0,"Je leur dirai donc tu les aimes"],[5,0,"Car ta bonté vaut mieux que la vie"],[6,0,"Je lèverai mes mains en ton nom (x2)"],[7,0,"Je te bénirai donc toute ma vie"],[8,0,"Car ta bonté vaut mieux que la vie"]]);

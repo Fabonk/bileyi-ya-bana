@@ -1,0 +1,1 @@
+BYB.txt(1924,[[1,0,"Ô aleluya Yesu azali na bomoi na ngai"],[2,0,"O Aleluya! Yesu azali na bomoi ! (2x)"],[3,0,"O Aleluya! Esengo, Azali na bomoi."],[4,0,"O Aleluya ! Yesu azali na bomoi!"],[5,0,"Esengo be, Ye kati na ngai(3x)"],[6,0,"Yemba nkembo, Aleluya!"],[7,0,"Yesu azali."]]);

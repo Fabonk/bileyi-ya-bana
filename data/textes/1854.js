@@ -1,0 +1,1 @@
+BYB.txt(1854,[[1,0,"N’ekulusu, n’ekulusu"],[2,0,"N'Ekulusu, n'ekulusu,"],[3,0,"Epai nalimbisami,"],[4,0,"Mokumba na ngai elongwi."],[5,0,"Nasombami, ngai nakobanga te,"],[6,0,"Mpe nakoyembela Mobikisi."]]);

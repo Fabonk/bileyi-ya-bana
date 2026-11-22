@@ -1,0 +1,1 @@
+BYB.txt(1773,[[1,0,"Le Messie est le Roi des rois"],[2,0,"Le Messie est le Roi des rois"],[3,0,"Il est le Seigneur des seigneurs"],[4,0,"(2x)"],[5,0,"Il est le Roi, Seigneur des seigneurs"],[6,0,"Le Messie est le Roi des rois"],[7,0,"Il est le Seigneur des seigneurs"]]);

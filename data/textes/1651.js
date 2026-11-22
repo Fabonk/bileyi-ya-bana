@@ -1,0 +1,1 @@
+BYB.txt(1651,[[1,0,"Je crois en Dieu"],[2,0,"Je crois en Dieu! Je crois en Dieu!"],[3,0,"Il en sera tel qu’Il l’a dit;"],[4,0,"Crois, obéis, lève les yeux, dis :"],[5,0,"«Oui, je crois, oui, je crois en Dieu.»"],[6,0,"Maintenant si tu veux le salut,"],[7,0,"Le Saint Esprit et la puissance;"],[8,0,"Crois, obéis et confesse-le :"],[9,0,"«Oui, je crois, oui, je crois en Dieu.»"]]);

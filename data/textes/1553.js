@@ -1,0 +1,1 @@
+BYB.txt(1553,[[1,0,"Dieu n’est pas mort"],[2,0,"Dieu n’est pas mort, il vit encore"],[3,0,"(3x)"],[4,0,"Je le sens dans mes mains"],[5,0,"Je le sens dans mes pieds"],[6,0,"Je le sens dans mon coeur"],[7,0,"Je le sens dans mon âme"],[8,0,"Je le sens tout autour de moi"],[9,0,"Alléluia !"]]);

@@ -1,0 +1,1 @@
+BYB.txt(1740,[[1,0,"La beauté de Jésus"],[2,0,"Que la beauté de Jésus, Sa pureté"],[3,0,"Et Son merveilleux amour soient vus en moi;"],[4,0,"O Toi, Esprit divin, rends pure toute ma nature,"],[5,0,"Que la beauté de Jésus soit vue en moi."]]);

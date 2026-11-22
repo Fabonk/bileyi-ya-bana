@@ -1,0 +1,1 @@
+BYB.txt(1997,[[1,0,"Précieux Jésus"],[2,0,"Précieux Jésus, combien je T’aime,"],[3,0,"Laisse-moi m’accrocher à Ta main ;"],[4,0,"Précieux Jésus, façonne-moi,"],[5,0,"Que Ta force me soutienne !"],[6,0,"Précieux Jésus, je T’adore,"],[7,0,"Tu es tout ce que mon cœur peut voir ;"],[8,0,"Précieux Jésus, Dieu éternel,"],[9,0,"Tu représentes tout pour moi."]]);

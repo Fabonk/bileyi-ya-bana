@@ -1,0 +1,1 @@
+BYB.txt(1906,[[1,0,"Nous donnons la gloire"],[2,0,"Nous donnons la gloire au Seigneur Jésus"],[3,0,"C’est Lui qui l’a fait,"],[4,0,"c’est Lui qui l’a fait."],[5,0,"Nous donnons la gloire au Seigneur Jésus,"],[6,0,"C’est lui qui l’a fait par amour"]]);

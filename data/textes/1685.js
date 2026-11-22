@@ -1,0 +1,1 @@
+BYB.txt(1685,[[1,0,"Je t’aime d’un amour"],[2,0,"Je t’aime d’un amour du Seigneur"],[3,0,"Je t’aime d’un amour du Seigneur"],[4,0,"Car je vois en toi l’amour de Jésus"],[5,0,"Je t’aime d’un amour du Seigneur"],[6,0,"Nalingi yo na bolingo ya Nkolo"],[7,0,"Nalingi yo na bolingo ya Nkolo"],[8,0,"Na moni kati na yo bolingo na Yesu"],[9,0,"Na lingi yo na bolingo ya Nkolo"]]);

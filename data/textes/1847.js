@@ -1,0 +1,1 @@
+BYB.txt(1847,[[1,0,"Moto epeli"],[2,0,"Moto epeli na motema (4x)"],[3,0,"Nalingi ye na motema (4x)"],[4,0,"Natondi ye na motema (4x)"],[5,0,"Alléluia! Nkembo na ye(4x)"],[6,0,"Yesu akoya koluka ngai(4x)"],[7,0,"Oyamba ye na motema (4x)"],[8,0,"Nayambi ye na esengo (4x)"]]);

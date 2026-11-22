@@ -1,0 +1,1 @@
+BYB.txt(1726,[[1,0,"Juste un autre toucher, Seigneur"],[2,0,"Juste un autre toucher, Seigneur,"],[3,0,"Qui m’aide en temps de dures épreuves;"],[4,0,"Bien que la nuit soit sombre, Tu envoies un rayon,"],[5,0,"Quand j’obtiens un autre toucher de Toi."]]);

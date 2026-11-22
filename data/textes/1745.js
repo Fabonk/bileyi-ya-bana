@@ -1,0 +1,1 @@
+BYB.txt(1745,[[1,0,"La foi en Jéhovah"],[2,0,"Foi dans le Père et foi dans le Fils,"],[3,0,"Foi dans le Saint-Esprit, ces trois sont Un ;"],[4,0,"Les démons tremblent, les pécheurs s’éveillent;"],[5,0,"La foi en Jéhovah ébranle toute chose."]]);

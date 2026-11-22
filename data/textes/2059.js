@@ -1,0 +1,1 @@
+BYB.txt(2059,[[1,0,"Rien, ô Jésus ! que ta grâce"],[2,0,"Rien, ô Jésus ! Que ta grâce"],[3,0,"Rien que ton Sang Précieux"],[4,0,"Qui seul mes péchés efface,"],[5,0,"Ne me rend saint, Juste, heureux,"],[6,0,"Ne me dites autre chose,"],[7,0,"Sinon qu’il est mon sauveur,"],[8,0,"L’auteur, la source et la cause"],[9,0,"De mon Eternel bonheur."]]);

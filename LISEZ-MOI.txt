@@ -1,0 +1,63 @@
+BILEYI YA BANA — VERSION HTML STATIQUE
+======================================
+
+Ce dossier est un site web complet, fait seulement de pages HTML : pas de base de données,
+pas de serveur, pas d'installation. Il se lit hors connexion.
+
+OUVRIR
+  Double-cliquer sur index.html (Chrome, Edge, Firefox…). Tout fonctionne ainsi, y compris la recherche.
+
+CONTENU
+  sermons/        une page par sermon, rangées par année : sermons/1963/63-0318.html (version Shekinah, par défaut)
+                  et, quand elles existent, les autres traductions : 63-0318-vgr.html, -ms, -fvm, -bbv.
+                  Dans les listes, les sigles SHP, VGR, MS… sont à côté de chaque titre : le titre ouvre la
+                  version Shekinah, un sigle ouvre cette traduction. En haut de chaque sermon, le choix de la
+                  version reste disponible (l'autre version s'ouvre au § en cours de lecture).
+                  Chaque paragraphe garde son numéro (§) : sermons/1963/63-0318.html#p12 ouvre le § 12.
+  livres/         en trois parties : les biographies ; les histoires et témoignages (dont sa vie racontée par
+                  lui-même) ; les livres de William Branham (l'Exposé des Sept Âges, les séries de prédications,
+                  les recueils de citations, les brochures et études bibliques).
+                  Les livres viennent des PDF de la bibliothèque : chaque page renvoie au PDF original
+                  (lien « p. 63 » dans la marge = page du PDF).
+  cantiques/      les 781 cantiques du recueil CEPP, un par page, avec la recherche par numéro ou par mots
+                  et la préface du recueil.
+  bible/          la Bible Louis Segond 1910, un chapitre par page (bible/jean/3.html#s16 ouvre Jean 3:16).
+                  Le Chat IA la cite, et les références bibliques des fiches de lecture y mènent.
+  documents/      la liste de tous les fichiers de la bibliothèque (PDF, école du dimanche…) et les photos.
+  recherche.html  recherche dans tout le texte (sermons, livres, cantiques, et la Bible si on coche « Bible »)
+                  ou dans les titres.
+  assistant.html  le Chat IA : il cherche les passages dans les sermons, les livres et la Bible, puis Gemini (l'IA
+                  de Google) répond en citant ses sources ; sur une page de lecture (bouton « ✦ Chat IA ») il résume la page,
+                  en explique les idées et explique un paragraphe (toucher son numéro, « Expliquer avec l'IA »).
+                  Il a besoin d'internet. Gemini répond d'abord ; s'il est saturé, un modèle gratuit d'OpenRouter.
+                  Une IA peut se tromper : vérifier avec les liens des sources.
+                  Chaque sermon (toutes ses versions) et chapitre a aussi une « Fiche de lecture » (résumé automatique, mots-clés,
+                  références bibliques, textes proches), calculée sans IA, qui marche sans internet.
+  favoris.html    les pages et paragraphes gardés (☆) et les passages surlignés (sélectionner des mots dans un texte,
+                  puis une couleur en bas de l'écran ; bouton « 🖍 Surligner » des pages de lecture ; ou le numéro
+                  d'un paragraphe), enregistrés dans le navigateur.
+  data/           les fichiers de la recherche (index des mots, textes) : ne pas les supprimer.
+  assets/         la présentation (byb.css) et les scripts (cadre.js : l'en-tête, le menu et le pied de page de toutes
+                  les pages, et le texte des sermons et de la Bible, lu dans data/textes ; byb.js, recherche.js…).
+
+À SAVOIR
+  - Les liens vers les PDF et les photos pointent vers les dossiers de la bibliothèque (01 - Sermons…,
+    02 - Livres…) : garder ce dossier à sa place, dans « william branham ».
+  - Les favoris, les surlignages, la taille du texte, le thème et « Reprendre la lecture » sont gardés dans le navigateur
+    de cet appareil (page Favoris : « Enregistrer une copie » pour les transporter).
+  - Le texte des sermons est celui de la traduction Shekinah et des autres traductions de la bibliothèque
+    (VGR, MS, FVM, BBV) : avant de mettre ce site en ligne, s'assurer d'en avoir le droit (l'avis de Voice of
+    God Recordings, à la fin de ses PDF, interdit par exemple de publier ses textes sur un site Web).
+  - La recherche et le Chat IA travaillent sur le texte Shekinah ; les fiches de lecture existent pour chaque version.
+
+METTRE EN LIGNE (si les droits le permettent)
+  Copier le dossier tel quel chez n'importe quel hébergeur de pages statiques. Pour que les liens des
+  PDF mènent aux adresses de téléchargement au lieu des dossiers de la bibliothèque, refaire le site avec
+  l'option --liens web (voir ci-dessous).
+
+REFAIRE LE SITE (après une mise à jour des données)
+  Les scripts sont dans « _Application BYB\pipeline » :
+    python -I pipeline\extract_books.py "<dossier william branham>" data\livres.json   (demande PyMuPDF)
+    python pipeline\extract_versions.py "<dossier william branham>" data\versions.json   (PyMuPDF, antiword)
+    python -I pipeline\get_bible.py data\bible.json   (télécharge la Bible Louis Segond 1910, une fois)
+    python -I pipeline\build_site.py "<dossier william branham>" "<dossier william branham>\_Site BYB"

@@ -1,0 +1,1 @@
+BYB.txt(1597,[[1,0,"Hatikva (L’hymne national d’Israël)"],[2,0,"Aussi longtemps qu’en nos cœurs"],[3,0,"Vibrera l’âme juive,"],[4,0,"Et, tournée vers l’Orient"],[5,0,"Aspirera à Sion ;"],[6,0,"Notre espoir n’est pas vain,"],[7,0,"Espérance bimillénaire :"],[8,0,"D’être un peuple libre sur notre terre,"],[9,0,"Le pays de Sion et Jérusalem."]]);

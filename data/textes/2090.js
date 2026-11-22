@@ -1,0 +1,1 @@
+BYB.txt(2090,[[1,0,"Souris donc"],[2,0,"Souris donc"],[3,0,"Détends ton visage"],[4,0,"Lève les mains"],[5,0,"Vers celui que tu aimes"],[6,0,"Serre la main de ton voisin"],[7,0,"Oh ! Pèlerin souris"]]);
